@@ -4,4 +4,5 @@
     <string name="hearing_from">How did you hear about our Learning App?</string>
     <string name="intro_text">The free, fun and effective way to learn a language!</string>
     <string name="intro_title">duolingo</string>
+    <string name="intro_text_ready">Hi there! I am Duo</string>
 </resources>
