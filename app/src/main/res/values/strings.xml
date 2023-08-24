@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">LearningApp</string>
+    <string name="english_language">English</string>
+    <string name="hindi_language">Hindi</string>
+    <string name="chinese_language">Chinese</string>
+    <string name="german_language">German</string>
+    <string name="italian_language">Italian</string>
+    <string name="spanish_language">Spanish</string>
+    <string name="french_language">French</string>
+    <string name="arabic_language">Arabic</string>
 </resources>

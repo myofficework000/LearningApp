@@ -17,12 +17,12 @@ import androidx.compose.ui.graphics.Color
 * */
 
 private val theme_light = lightColorScheme(
-    primary = blue,
+    primary = Blue,
     onPrimary = lightBlue,
-    secondary = white,
+    secondary = White,
     onSecondary = Color.Black,
     background = darkBlue,
-    onBackground = white,
+    onBackground = White,
     surface = holoGreen,
     onSurface = Color.Black
 )
@@ -38,7 +38,7 @@ private val theme_green = lightColorScheme(
 private val theme_red = lightColorScheme(
     primary = darkRed,
     onPrimary = lightRed,
-    secondary = holoRed
+    secondary = HoloRed
 )
 
 @Composable
