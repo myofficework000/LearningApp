@@ -7,6 +7,7 @@ val white = Color(0xFFFFFFFF)
 val blue = Color(0xFF2400FF)
 val veryDarkBlue = Color(0xFF001016)
 // common colors
+val Green40 = Color(0xFF56BD0E)
 val Green100 = Color(0xFF57B940)
 val Green50 = Color(0x5986D773)
 val Blue100 = Color(0xFF45aaf2)
