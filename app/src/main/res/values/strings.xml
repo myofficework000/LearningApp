@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">LearningApp</string>
+    <string name="btn_continue">Continue</string>
+    <string name="hearing_from">How did you hear about our Learning App?</string>
 </resources>
