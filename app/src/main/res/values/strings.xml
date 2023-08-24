@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">LearningApp</string>
-    <string name="text">The free, fun and effective way to learn a language!</string>
+    <string name="intro_text">The free, fun and effective way to learn a language!</string>
+    <string name="intro_title">duolingo</string>
 </resources>
