@@ -45,7 +45,7 @@ fun StartLevelScreen() {
     ) {
         val (containerOwl, listOfAchievements, btnContinue) = createRefs()
         OwlAnimationWithTextOnLeft(
-            text = "Now, let's find the best place to start!",
+            text = stringResource(R.string.choose_start_level),
             modifier = Modifier.constrainAs(containerOwl) {
                 top.linkTo(parent.top)
             })
