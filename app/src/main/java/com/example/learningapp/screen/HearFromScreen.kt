@@ -48,7 +48,9 @@ fun HearFromScreen(){
     ConstraintLayout(
         modifier = Modifier.fillMaxSize()) {
         val (containerOwl, listOfHearing, btnContinue) = createRefs()
-        ContainerOwl(modifier = Modifier.constrainAs(containerOwl){
+        ContainerOwlAnimationWithText(
+            text = stringResource(R.string.hearing_from),
+            modifier = Modifier.constrainAs(containerOwl){
             top.linkTo(parent.top)
         })
         LazyColumn(
@@ -79,43 +81,6 @@ fun HearFromScreen(){
     }
 }
 
-
-@Composable
-fun ContainerOwl( modifier: Modifier){
-    ConstraintLayout(modifier = modifier
-        .fillMaxWidth()
-        .wrapContentHeight()) {
-        val (animationOwl, txtHearing) = createRefs()
-        OwlAnimation(Modifier.constrainAs(animationOwl){
-            top.linkTo(parent.top)
-            start.linkTo(parent.start)
-        })
-        Text(text = stringResource(R.string.hearing_from),
-            modifier = Modifier.constrainAs(txtHearing){
-                start.linkTo(animationOwl.end)
-                end.linkTo(parent.end)
-                top.linkTo(parent.top)
-                bottom.linkTo(parent.bottom)
-                width = Dimension.fillToConstraints
-            })
-    }
-
-}
-@Composable
-fun OwlAnimation(modifier: Modifier) {
-    val rawComposition
-    by rememberLottieComposition(
-        spec = LottieCompositionSpec.RawRes(R.raw.animation_owl))
-
-    LottieAnimation(
-        composition = rawComposition,
-        contentScale = ContentScale.Fit,
-        iterations = Int.MAX_VALUE,
-        modifier = modifier
-            .width(width = 200.dp)
-            .height(height = 200.dp)
-    )
-}
 @Composable
 fun HearFromViewHolder(hearFrom : HearFromData){
     Card(
