@@ -20,4 +20,5 @@
     <string name="knowledge_text4">Im Intermediate to Higher</string>
     <string name="Button_Continue_Caps">CONTINUE</string>
     <string name="intro_text_ready">Hi there! I am Duo</string>
+    <string name="intro_achieve">Here\'s what you can achieve!</string>
 </resources>
