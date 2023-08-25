@@ -19,7 +19,7 @@ import com.example.learningapp.R
 
 
 @Composable
-fun ContainerOwlAnimationWithText( modifier: Modifier, text:String){
+fun OwlAnimationWithTextOnLeft(modifier: Modifier, text:String){
     ConstraintLayout(modifier = modifier
         .fillMaxWidth()
         .wrapContentHeight()) {
