@@ -1,5 +1,13 @@
 <resources>
     <string name="app_name">LearningApp</string>
+    <string name="english_language">English</string>
+    <string name="hindi_language">Hindi</string>
+    <string name="chinese_language">Chinese</string>
+    <string name="german_language">German</string>
+    <string name="italian_language">Italian</string>
+    <string name="spanish_language">Spanish</string>
+    <string name="french_language">French</string>
+    <string name="arabic_language">Arabic</string>
     <string name="btn_continue">Continue</string>
     <string name="hearing_from">How did you hear about our Learning App?</string>
     <string name="intro_text">The free, fun and effective way to learn a language!</string>
@@ -10,4 +18,5 @@
     <string name="knowledge_text3">I can have simple conversations</string>
     <string name="knowledge_text4">Im Intermediate to Higher</string>
     <string name="Button_Continue_Caps">CONTINUE</string>
+    <string name="intro_text_ready">Hi there! I am Duo</string>
 </resources>
