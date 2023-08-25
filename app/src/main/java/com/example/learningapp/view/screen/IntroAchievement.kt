@@ -25,6 +25,7 @@ import com.example.learningapp.R
 import com.example.learningapp.modal.dto.Achievement
 import com.example.learningapp.modal.dto.getAchievements
 import com.example.learningapp.view.navigation.NavRoutes.TIME_CHOICE_SCREEN
+import com.example.learningapp.view.screen.utils.OwlAnimation
 import com.example.learningapp.view.theme.Green40
 
 @Composable
