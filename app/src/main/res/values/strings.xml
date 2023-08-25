@@ -25,6 +25,10 @@
     <string name="i_have_already_account">I ALREADY HAVE A ACCOUNT</string>
     <string name="what_you_want_to_learn">What would you like to learn?</string>
     <string name="sign_in_from_email">SIGN IN WITH EMAIL\n</string>
+    <string name="reminder_notification">I\'ll remind you to practice so it becomes a habit</string>
+    <string name="allow">Allow</string>
+    <string name="do_not_allow">Don\'t allow</string>
+    <string name="send_notification">Do you allow Duolingo to send you notifications</string
     <string name="the_girls">the_girls</string>
     <string name="the_boy">the_boy</string>
     <string name="the_women">the_women</string>
