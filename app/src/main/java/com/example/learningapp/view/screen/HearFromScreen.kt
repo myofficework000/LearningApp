@@ -28,6 +28,7 @@ import androidx.navigation.NavController
 import com.example.learningapp.R
 import com.example.learningapp.modal.dto.HearFromData
 import com.example.learningapp.view.navigation.NavRoutes.KNOWLEDGE_SCREEN
+import com.example.learningapp.view.screen.utils.OwlAnimationWithTextOnLeft
 import com.example.learningapp.view.theme.Green40
 
 @Composable
@@ -36,7 +37,7 @@ fun HearFromScreen(navController: NavController) {
         modifier = Modifier.fillMaxSize()
     ) {
         val (containerOwl, listOfHearing, btnContinue) = createRefs()
-        ContainerOwlAnimationWithText(
+        OwlAnimationWithTextOnLeft(
             text = stringResource(R.string.hearing_from),
             modifier = Modifier.constrainAs(containerOwl) {
                 top.linkTo(parent.top)
