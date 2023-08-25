@@ -21,4 +21,8 @@
     <string name="Button_Continue_Caps">CONTINUE</string>
     <string name="intro_text_ready">Hi there! I am Duo</string>
     <string name="intro_achieve">Here\'s what you can achieve!</string>
+    <string name="get_started">GET STARTED\n</string>
+    <string name="i_have_already_account">I ALREADY HAVE A ACCOUNT</string>
+    <string name="what_you_want_to_learn">What would you like to learn?</string>
+    <string name="sign_in_from_email">SIGN IN WITH EMAIL\n</string>
 </resources>

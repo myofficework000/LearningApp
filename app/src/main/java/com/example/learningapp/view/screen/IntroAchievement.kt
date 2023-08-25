@@ -1,4 +1,4 @@
-package com.example.learningapp.screen
+package com.example.learningapp.view.screen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.fillMaxSize
@@ -12,28 +12,28 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
+import androidx.navigation.NavController
 import com.example.learningapp.R
-import com.example.learningapp.ui.theme.Green40
+import com.example.learningapp.modal.dto.Achievement
+import com.example.learningapp.modal.dto.getAchievements
+import com.example.learningapp.view.navigation.NavRoutes.TIME_CHOICE_SCREEN
+import com.example.learningapp.view.theme.Green40
 
-@Preview
 @Composable
-fun achievementScreen(){
+fun AchievementScreen(navController: NavController) {
     ConstraintLayout(
         modifier = Modifier.fillMaxSize()
     ) {
         val (containerOwl, listOfAchievements, btnContinue) = createRefs()
-        logoContainer(modifier = Modifier.constrainAs(containerOwl){
+        LogoContainer(modifier = Modifier.constrainAs(containerOwl) {
             top.linkTo(parent.top)
         })
 
@@ -46,15 +46,15 @@ fun achievementScreen(){
                     bottom.linkTo(btnContinue.top)
                     height = Dimension.fillToConstraints
                 }
-        ){
-            items(getAchievements()){ achievement ->
+        ) {
+            items(getAchievements()) { achievement ->
                 AchievementItem(achievement)
             }
         }
 
         Button(
-            onClick = {        },
-            colors= ButtonDefaults.buttonColors(Green40),
+            onClick = { navController.navigate(TIME_CHOICE_SCREEN)},
+            colors = ButtonDefaults.buttonColors(Green40),
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(10.dp)
@@ -68,17 +68,19 @@ fun achievementScreen(){
 }
 
 @Composable
-fun logoContainer( modifier: Modifier){
-    ConstraintLayout(modifier = modifier
-        .fillMaxWidth()
-        .wrapContentHeight()) {
+fun LogoContainer(modifier: Modifier) {
+    ConstraintLayout(
+        modifier = modifier
+            .fillMaxWidth()
+            .wrapContentHeight()
+    ) {
         val (animationOwl, txtHearing) = createRefs()
-        OwlAnimation(Modifier.constrainAs(animationOwl){
+        OwlAnimation(Modifier.constrainAs(animationOwl) {
             top.linkTo(parent.top)
             start.linkTo(parent.start)
         })
         Text(text = stringResource(R.string.intro_achieve),
-            modifier = Modifier.constrainAs(txtHearing){
+            modifier = Modifier.constrainAs(txtHearing) {
                 start.linkTo(animationOwl.end)
                 end.linkTo(parent.end)
                 top.linkTo(parent.top)
@@ -88,10 +90,8 @@ fun logoContainer( modifier: Modifier){
     }
 }
 
-
-@OptIn(ExperimentalComposeUiApi::class)
 @Composable
-fun AchievementItem(achievement: Achievement){
+fun AchievementItem(achievement: Achievement) {
     ConstraintLayout(
         modifier = Modifier
             .padding(15.dp)
@@ -131,10 +131,5 @@ fun AchievementItem(achievement: Achievement){
     }
 }
 
-data class Achievement(val title: String, val subtitle: String, val img:Int)
-fun getAchievements() = listOf(
-    Achievement("Converse with confidence","60,200+ stress-free interactive exercises",R.drawable.ic_messages),
-    Achievement("Build a large vocabulary","8,400+practical words and Phrased", R.drawable.ic_flash_cards),
-    Achievement("Develop a learning habit","Smart reminders, fun challenges, and more", R.drawable.ic_watch)
-)
+
 

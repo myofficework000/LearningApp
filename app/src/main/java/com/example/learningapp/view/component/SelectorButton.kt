@@ -1,4 +1,4 @@
-package com.example.learningapp.component
+package com.example.learningapp.view.component
 
 import android.graphics.Color
 import androidx.compose.foundation.background

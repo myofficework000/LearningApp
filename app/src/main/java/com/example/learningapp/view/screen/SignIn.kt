@@ -1,4 +1,4 @@
-package com.example.learningapp.screen
+package com.example.learningapp.view.screen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
@@ -25,23 +25,25 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
+import androidx.navigation.NavController
 import com.example.learningapp.R
 
 @OptIn(ExperimentalMaterial3Api::class)
-@Preview
 @Composable
-fun SignInScreen(){
+fun SignInScreen(navController: NavController) {
     var areaCode by remember { mutableStateOf("") }
     var mobileNumber by remember { mutableStateOf("") }
     var verificationCode by remember { mutableStateOf("") }
     ConstraintLayout(
         Modifier
             .fillMaxSize()
-            .padding(16.dp)) {
+            .padding(16.dp)
+    ) {
         val (areaCodeField, mobileNumberField, getCodeButton, verificationCodeField, signInButton, googleButton, facebookButton, emailButton) = createRefs()
         val guideline = createGuidelineFromStart(0.2f)
         TextField(
@@ -74,7 +76,7 @@ fun SignInScreen(){
             maxLines = 1,
             singleLine = true,
             trailingIcon = {
-                TextButton(onClick = {  }) {
+                TextButton(onClick = { }) {
                     Text("GET CODE")
                 }
             }
@@ -101,7 +103,7 @@ fun SignInScreen(){
                 containerColor = Color(0xFFE4E4E4),
                 contentColor = Color(0xFFB4B4B4)
             ),
-            onClick = {   },
+            onClick = { },
             modifier = Modifier
                 .fillMaxWidth()
                 .constrainAs(signInButton) {
@@ -207,11 +209,8 @@ fun SignInScreen(){
                         .size(24.dp)
                         .padding(end = 8.dp)
                 )
-                Text("SIGN IN WITH EMAIL")
+                Text(stringResource(id = R.string.sign_in_from_email))
             }
         }
-
-
-        }
-
     }
+}

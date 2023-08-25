@@ -1,4 +1,4 @@
-package com.example.learningapp.screen
+package com.example.learningapp.view.screen
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.BorderStroke
@@ -26,31 +26,29 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
+import androidx.navigation.NavController
 import com.airbnb.lottie.compose.LottieAnimation
 import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.example.learningapp.R
-import com.example.learningapp.ui.theme.GreyWhite
-import com.example.learningapp.ui.theme.LightGrey
-import com.example.learningapp.ui.theme.SurfaceDark
-import com.example.learningapp.ui.theme.grey
+import com.example.learningapp.view.navigation.NavRoutes.FRESH_START_SCREEN
+import com.example.learningapp.view.theme.GreyWhite
+import com.example.learningapp.view.theme.LightGrey
 
-
-@Preview(showBackground = true)
 @Composable
-fun KnowledgeScreen(){
-
-    ConstraintLayout(modifier = Modifier.fillMaxSize()){
+fun KnowledgeScreen(navController: NavController) {
+    ConstraintLayout(modifier = Modifier.fillMaxSize()) {
 
         val guideline = createGuidelineFromTop(0.03f)
+        val (animationOwl, textSpanish, text1, text2, text3, text4, btnContinue) = createRefs()
+        val rawComposition by rememberLottieComposition(
+            spec = LottieCompositionSpec.RawRes(R.raw.animation_owl)
+        )
 
-        val(animationOwl, textSpanish,text1,text2,text3,text4, btnContinue) = createRefs()
-        val rawComposition by rememberLottieComposition(spec = LottieCompositionSpec.RawRes(R.raw.animation_owl))
         LottieAnimation(
             composition = rawComposition,
             contentScale = ContentScale.Fit,
@@ -75,35 +73,39 @@ fun KnowledgeScreen(){
                     top.linkTo(animationOwl.top)
                     width = Dimension.fillToConstraints
                 }
-                .padding(start = 24.dp,top=24.dp,end = 8.dp,))
+                .padding(start = 24.dp, top = 24.dp, end = 8.dp))
 
 
-        KnowledgeAboutSpanish(text = stringResource(id = R.string.knowledge_text1), img = R.drawable.strength_one,
-            Modifier.constrainAs(text1){
+        KnowledgeAboutSpanish(text = stringResource(id = R.string.knowledge_text1),
+            img = R.drawable.strength_one,
+            Modifier.constrainAs(text1) {
                 start.linkTo(parent.start)
                 top.linkTo(animationOwl.bottom)
                 end.linkTo(parent.end)
             })
-        KnowledgeAboutSpanish(text = stringResource(id = R.string.knowledge_text2), img = R.drawable.strength_two,
-            Modifier.constrainAs(text2){
+        KnowledgeAboutSpanish(text = stringResource(id = R.string.knowledge_text2),
+            img = R.drawable.strength_two,
+            Modifier.constrainAs(text2) {
                 start.linkTo(parent.start)
                 top.linkTo(text1.bottom)
                 end.linkTo(parent.end)
             })
-        KnowledgeAboutSpanish(text = stringResource(id = R.string.knowledge_text3), img = R.drawable.strength_three,
-            Modifier.constrainAs(text3){
+        KnowledgeAboutSpanish(text = stringResource(id = R.string.knowledge_text3),
+            img = R.drawable.strength_three,
+            Modifier.constrainAs(text3) {
                 start.linkTo(parent.start)
                 top.linkTo(text2.bottom)
                 end.linkTo(parent.end)
             })
-        KnowledgeAboutSpanish(text = stringResource(id = R.string.knowledge_text4), img = R.drawable.strength_four,
-            Modifier.constrainAs(text4){
+        KnowledgeAboutSpanish(text = stringResource(id = R.string.knowledge_text4),
+            img = R.drawable.strength_four,
+            Modifier.constrainAs(text4) {
                 start.linkTo(parent.start)
                 top.linkTo(text3.bottom)
                 end.linkTo(parent.end)
             })
 
-        Button(onClick = { /*TODO*/ },
+        Button(onClick = { navController.navigate(FRESH_START_SCREEN) },
             colors = ButtonDefaults.buttonColors(GreyWhite),
             modifier = Modifier
                 .fillMaxWidth()
@@ -113,21 +115,22 @@ fun KnowledgeScreen(){
                     bottom.linkTo(parent.bottom)
                 }
                 .padding(horizontal = 16.dp, vertical = 16.dp)) {
-            Text(text = stringResource(id = R.string.Button_Continue_Caps),
+            Text(
+                text = stringResource(id = R.string.Button_Continue_Caps),
                 color = LightGrey,
-                fontWeight = FontWeight.Bold ,
+                fontWeight = FontWeight.Bold,
                 fontSize = 16.sp,
-                modifier = Modifier.padding(vertical = 8.dp))
+                modifier = Modifier.padding(vertical = 8.dp)
+            )
         }
-        
-    }
 
+    }
 
 
 }
 
 @Composable
-fun KnowledgeAboutSpanish(text : String, @DrawableRes img:Int, modifier: Modifier = Modifier){
+fun KnowledgeAboutSpanish(text: String, @DrawableRes img: Int, modifier: Modifier = Modifier) {
     Card(
         modifier = modifier
             .padding(10.dp)
@@ -139,8 +142,9 @@ fun KnowledgeAboutSpanish(text : String, @DrawableRes img:Int, modifier: Modifie
         ConstraintLayout(
             Modifier
                 .padding(10.dp)
-                .fillMaxWidth()) {
-            val (strengths,knowledgeAboutSpanish) = createRefs()
+                .fillMaxWidth()
+        ) {
+            val (strengths, knowledgeAboutSpanish) = createRefs()
             Image(painter = painterResource(id = img),
                 contentDescription = "hearFrom Img ",
                 modifier = Modifier

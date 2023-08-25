@@ -1,4 +1,4 @@
-package com.example.learningapp.screen
+package com.example.learningapp.view.screen
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height

@@ -1,4 +1,4 @@
-package com.example.learningapp.screen
+package com.example.learningapp.view.screen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -29,21 +29,20 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
+import androidx.navigation.NavController
 import com.airbnb.lottie.compose.LottieAnimation
 import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.example.learningapp.R
-import com.example.learningapp.screen.dto.LearningReason
-import com.example.learningapp.ui.theme.Green100
-
+import com.example.learningapp.modal.dto.LearningReason
+import com.example.learningapp.view.navigation.NavRoutes.INTRO_ACHIEVEMENT_SCREEN
+import com.example.learningapp.view.theme.Green100
 
 @Composable
-@Preview
-fun LearningReason() {
+fun LearningReason(navController: NavController) {
     val rawComposition by rememberLottieComposition(spec = LottieCompositionSpec.RawRes(R.raw.animation_owl))
 
     ConstraintLayout(
@@ -97,7 +96,7 @@ fun LearningReason() {
         }
 
         Button(
-            onClick = {},
+            onClick = {navController.navigate(INTRO_ACHIEVEMENT_SCREEN)},
             colors = ButtonDefaults.buttonColors(Green100),
             modifier = Modifier
                 .fillMaxWidth()
@@ -114,15 +113,18 @@ fun LearningReason() {
         }
     }
 }
+
 @Composable
 fun ReasonItem(reason: LearningReason) {
     val selectedOption = remember { mutableStateOf("unselected") }
     Card(
-        Modifier.padding(3.dp)
+        Modifier
+            .padding(3.dp)
             .border(1.dp, Color.Gray, shape = RoundedCornerShape(5.dp))
     ) {
         ConstraintLayout(
-            Modifier.background(Color.White)
+            Modifier
+                .background(Color.White)
                 .padding(5.dp)
                 .fillMaxWidth()
         ) {

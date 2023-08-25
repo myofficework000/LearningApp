@@ -1,4 +1,4 @@
-package com.example.learningapp.screen.dto
+package com.example.learningapp.modal.dto
 
 data class HearFromData(
     val name: String,

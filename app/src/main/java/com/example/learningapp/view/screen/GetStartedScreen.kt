@@ -1,4 +1,4 @@
-package com.example.learningapp.screen
+package com.example.learningapp.view.screen
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
@@ -11,19 +11,21 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
+import androidx.navigation.NavController
 import com.airbnb.lottie.compose.LottieAnimation
 import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.example.learningapp.R
-import com.example.learningapp.ui.theme.Green100
+import com.example.learningapp.view.navigation.NavRoutes.LANGUAGE_LIST
+import com.example.learningapp.view.theme.Green100
 
-@Preview
 @Composable
-fun GetStartedScreen() {
-    val rawComposition by rememberLottieComposition(spec = LottieCompositionSpec.RawRes(R.raw.animation_owl))
+fun GetStartedScreen(navController: NavController) {
+    val rawComposition by rememberLottieComposition(
+        spec = LottieCompositionSpec.RawRes(R.raw.animation_owl)
+    )
 
     ConstraintLayout(Modifier.fillMaxSize()) {
         val (textHello, animationView, nextButton, backButton) = createRefs()
@@ -46,11 +48,13 @@ fun GetStartedScreen() {
                     end.linkTo(parent.end)
                 },
             contentScale = ContentScale.FillBounds,
-            iterations = 5
+            iterations = Int.MAX_VALUE
         )
 
         Button(
-            onClick = {},
+            onClick = {
+                navController.navigate(LANGUAGE_LIST)
+            },
             colors = ButtonDefaults.buttonColors(Green100),
             modifier = Modifier.constrainAs(nextButton) {
                 top.linkTo(animationView.bottom)
@@ -59,7 +63,7 @@ fun GetStartedScreen() {
                 end.linkTo(parent.end)
             }) {
             Text(
-                text = "Continue",
+                text = stringResource(id = R.string.btn_continue),
                 color = Color.White
             )
         }

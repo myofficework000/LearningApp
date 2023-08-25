@@ -1,4 +1,4 @@
-package com.example.learningapp.screen.dto
+package com.example.learningapp.modal.dto
 
 import androidx.annotation.DrawableRes
 
