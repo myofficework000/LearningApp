@@ -15,6 +15,7 @@ import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.navigation.NavController
 import com.example.learningapp.R
 import com.example.learningapp.view.navigation.NavRoutes.LEARNING_REASON_SCREEN
+import com.example.learningapp.view.screen.utils.OwlAnimationWithTextOnLeft
 import com.example.learningapp.view.theme.Green40
 
 @Composable
@@ -22,7 +23,7 @@ fun FreshStartScreen(navController: NavController) {
     ConstraintLayout(
         modifier = Modifier.fillMaxSize()) {
         val (containerOwl,  btnContinue) = createRefs()
-        ContainerOwlAnimationWithText(
+        OwlAnimationWithTextOnLeft(
             text= stringResource(R.string.start_fresh),
             modifier = Modifier.constrainAs(containerOwl){
             top.linkTo(parent.top)
