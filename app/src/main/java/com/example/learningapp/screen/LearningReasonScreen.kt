@@ -1,6 +1,8 @@
 package com.example.learningapp.screen
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -9,9 +11,9 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
@@ -111,16 +113,17 @@ fun LearningReason() {
             )
         }
     }
-
 }
-
 @Composable
 fun ReasonItem(reason: LearningReason) {
     val selectedOption = remember { mutableStateOf("unselected") }
-    Card {
+    Card(
+        Modifier.padding(3.dp)
+            .border(1.dp, Color.Gray, shape = RoundedCornerShape(5.dp))
+    ) {
         ConstraintLayout(
-            Modifier
-                .padding(10.dp)
+            Modifier.background(Color.White)
+                .padding(5.dp)
                 .fillMaxWidth()
         ) {
             val (ReasonImage, ReasonDescription, ReasonRadioButton) = createRefs()
@@ -169,11 +172,11 @@ fun ReasonItem(reason: LearningReason) {
 
 private fun getReasons(): List<LearningReason> =
     listOf(
-        LearningReason("Just for fun", R.drawable.blog),
-        LearningReason("Boost my Career", R.drawable.blog),
-        LearningReason("Support my education", R.drawable.blog),
-        LearningReason("Spend time productively", R.drawable.blog),
-        LearningReason("prepare for travel", R.drawable.blog),
-        LearningReason("Connect with people", R.drawable.blog),
-        LearningReason("other", R.drawable.blog)
+        LearningReason("Just for fun", R.drawable.party_icon_learn_reason),
+        LearningReason("Boost my Career", R.drawable.career_icon_learn_reason),
+        LearningReason("Support my education", R.drawable.education_icon_learn_reason),
+        LearningReason("Spend time productively", R.drawable.time_productivity_learn_reason),
+        LearningReason("prepare for travel", R.drawable.travel_icon_learn_reason),
+        LearningReason("Connect with people", R.drawable.people_network_icon_learn_reason),
+        LearningReason("other", R.drawable.other_icon_learn_reason)
     )
