@@ -17,6 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -56,6 +57,7 @@ fun achievementScreen(){
             colors= ButtonDefaults.buttonColors(Green40),
             modifier = Modifier
                 .fillMaxWidth()
+                .padding(10.dp)
                 .constrainAs(btnContinue) {
                     bottom.linkTo(parent.bottom)
                 }
@@ -107,6 +109,7 @@ fun AchievementItem(achievement: Achievement){
                 .size(30.dp)
                 .padding(end = 8.dp)
         )
+
         Text(
             text = achievement.title,
             modifier = Modifier.constrainAs(titleText) {
@@ -114,17 +117,16 @@ fun AchievementItem(achievement: Achievement){
                 start.linkTo(iconImage.end, margin = 16.dp)
             },
             fontSize = 20.sp,
-            color = Color.Black
+            color = Color.Black,
         )
         Text(
             text = achievement.subtitle,
             modifier = Modifier.constrainAs(subtitleText) {
                 top.linkTo(titleText.bottom, margin = 10.dp)
                 start.linkTo(iconImage.end, margin = 16.dp)
-                end.linkTo(parent.end)
             },
             fontSize = 16.sp,
-            color = Color.Gray
+            color = Color.Gray,
         )
     }
 }
@@ -132,7 +134,7 @@ fun AchievementItem(achievement: Achievement){
 data class Achievement(val title: String, val subtitle: String, val img:Int)
 fun getAchievements() = listOf(
     Achievement("Converse with confidence","60,200+ stress-free interactive exercises",R.drawable.ic_messages),
-    Achievement("Build a large vocabulary","8,400+practical words and Phrased", R.drawable.ic_watch),
-    Achievement("Develop a learning habit","Smart reminders, fun challenges, and more", R.drawable.ic_flash_cards)
+    Achievement("Build a large vocabulary","8,400+practical words and Phrased", R.drawable.ic_flash_cards),
+    Achievement("Develop a learning habit","Smart reminders, fun challenges, and more", R.drawable.ic_watch)
 )
 
