@@ -16,7 +16,7 @@ val Blue50 = Color(0x5945AAF2)
 val Orange100 = Color(0xFFfa8231)
 val Orange50 = Color(0x59FA8231)
 val GreyButton = Color(0xFFE5E5E4)
-val GreyButtonText = Color(0xffb7b6b7)
+val GreyButtonText = Color(0xFF8B8B8B)
 val purple = Color(0xFFD96FF1)
 
 val Purple40 = Color(0xFF6650a4)
@@ -25,6 +25,7 @@ val Pink40 = Color(0xFF7D5260)
 val grey = Color(0xFF5A6361)
 val LightGrey = Color(0xFF979797)
 val GreyWhite = Color(0xFFDCDFDE)
+val TextGray = Color(0xFF505050)
 
 // light mode colors
 val BackgroundCreamWhite = Color(0xFFFFFFF0)
@@ -49,3 +50,6 @@ val lightGreen = Color(0xFF219921)
 // Theme: Red
 val darkRed = Color(0xFF631207)
 val lightRed = Color(0xFF9B392B)
+
+//
+val SelectedWord = Color(0xB900CDFF)
