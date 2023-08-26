@@ -43,4 +43,6 @@
     <string name="zulu">Sawubona, mama.</string>
     <string name="skip">Skip</string>
     <string name="check">Check</string>
+    <string name="brother">Brother</string>
+    <string name="translate_sentence">Translate this Sentence</string>
 </resources>

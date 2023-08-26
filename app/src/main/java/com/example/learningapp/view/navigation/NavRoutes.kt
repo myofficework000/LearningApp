@@ -13,4 +13,5 @@ object NavRoutes {
     const val SIGN_IN_SCREEN = "SignInScreen"
     const val MOTIVATION_SCREEN = "MotivationScreen"
     const val FUN_SCREEN = "FunScreen"
+    const val TRANSLATE_SENTENCE_SCREEN = "TranslateSentenceScreen"
 }

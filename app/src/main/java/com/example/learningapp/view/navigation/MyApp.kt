@@ -16,6 +16,7 @@ import com.example.learningapp.view.navigation.NavRoutes.LEARNING_REASON_SCREEN
 import com.example.learningapp.view.navigation.NavRoutes.MOTIVATION_SCREEN
 import com.example.learningapp.view.navigation.NavRoutes.SIGN_IN_SCREEN
 import com.example.learningapp.view.navigation.NavRoutes.TIME_CHOICE_SCREEN
+import com.example.learningapp.view.navigation.NavRoutes.TRANSLATE_SENTENCE_SCREEN
 import com.example.learningapp.view.screen.AchievementScreen
 import com.example.learningapp.view.screen.FreshStartScreen
 import com.example.learningapp.view.screen.FunScreen
@@ -28,6 +29,7 @@ import com.example.learningapp.view.screen.LearningReason
 import com.example.learningapp.view.screen.MotivationScreen
 import com.example.learningapp.view.screen.SignInScreen
 import com.example.learningapp.view.screen.TimesList
+import com.example.learningapp.view.screen.TranslateSentenceBrother
 
 @Composable
 fun MyApp() {
@@ -50,5 +52,6 @@ fun MyApp() {
         composable(route = SIGN_IN_SCREEN) { SignInScreen(navController) }
         composable(route = MOTIVATION_SCREEN) { MotivationScreen(navController) }
         composable(route = FUN_SCREEN) { FunScreen(navController) }
+        composable(route = TRANSLATE_SENTENCE_SCREEN) { TranslateSentenceBrother(navController) }
     }
 }
