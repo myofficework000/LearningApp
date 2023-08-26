@@ -15,6 +15,7 @@ import com.example.learningapp.view.navigation.NavRoutes.KNOWLEDGE_SCREEN
 import com.example.learningapp.view.navigation.NavRoutes.LANGUAGE_LIST
 import com.example.learningapp.view.navigation.NavRoutes.LEARNING_REASON_SCREEN
 import com.example.learningapp.view.navigation.NavRoutes.MOTIVATION_SCREEN
+import com.example.learningapp.view.navigation.NavRoutes.SIGN_IN_EMAIL_SCREEN
 import com.example.learningapp.view.navigation.NavRoutes.SIGN_IN_SCREEN
 import com.example.learningapp.view.navigation.NavRoutes.TIME_CHOICE_SCREEN
 import com.example.learningapp.view.screen.AchievementScreen
@@ -28,6 +29,7 @@ import com.example.learningapp.view.screen.KnowledgeScreen
 import com.example.learningapp.view.screen.LanguagesList
 import com.example.learningapp.view.screen.LearningReason
 import com.example.learningapp.view.screen.MotivationScreen
+import com.example.learningapp.view.screen.SignInEmailScreen
 import com.example.learningapp.view.screen.SignInScreen
 import com.example.learningapp.view.screen.TimesList
 
@@ -53,5 +55,6 @@ fun MyApp() {
         composable(route = MOTIVATION_SCREEN) { MotivationScreen(navController) }
         composable(route = FUN_SCREEN) { FunScreen(navController) }
         composable(route = HEAR_AND_CHOOSE_SCREEN) { HearAndChooseWordScreen(navController) }
+        composable(route = SIGN_IN_EMAIL_SCREEN) { SignInEmailScreen(navController) }
     }
 }

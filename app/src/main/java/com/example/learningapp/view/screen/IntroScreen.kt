@@ -26,6 +26,7 @@ import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.example.learningapp.R
 import com.example.learningapp.view.navigation.NavRoutes.GET_STARTED_SCREEN
+import com.example.learningapp.view.navigation.NavRoutes.SIGN_IN_EMAIL_SCREEN
 import com.example.learningapp.view.navigation.NavRoutes.SIGN_IN_SCREEN
 import com.example.learningapp.view.theme.Green40
 
@@ -74,7 +75,7 @@ fun IntroScreen(navController: NavController) {
                 })
 
         Button(onClick = {
-            navController.navigate(GET_STARTED_SCREEN)
+            navController.navigate(SIGN_IN_EMAIL_SCREEN)
         },
             colors = ButtonDefaults.buttonColors(Green40),
             modifier = Modifier
