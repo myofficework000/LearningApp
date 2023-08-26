@@ -43,6 +43,7 @@ import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.example.learningapp.R
+import com.example.learningapp.view.screen.utils.showToast
 import com.example.learningapp.view.theme.GreyWhite
 import com.example.learningapp.viewmodel.SignInSignUpViewModel
 
@@ -250,6 +251,3 @@ fun SignInEmailScreen(navController: NavController) {
     }
 }
 
-fun showToast(context: Context, it: String) {
-    Toast.makeText(context, it, Toast.LENGTH_SHORT).show()
-}
