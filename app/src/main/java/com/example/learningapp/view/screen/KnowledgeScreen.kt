@@ -35,12 +35,16 @@ import com.airbnb.lottie.compose.LottieAnimation
 import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.example.learningapp.R
+import com.example.learningapp.modal.dto.WordItem
 import com.example.learningapp.view.navigation.NavRoutes.FRESH_START_SCREEN
 import com.example.learningapp.view.theme.GreyWhite
 import com.example.learningapp.view.theme.LightGrey
 
 @Composable
 fun KnowledgeScreen(navController: NavController) {
+
+
+
     ConstraintLayout(modifier = Modifier.fillMaxSize()) {
 
         val guideline = createGuidelineFromTop(0.03f)
