@@ -50,3 +50,6 @@ val lightGreen = Color(0xFF219921)
 // Theme: Red
 val darkRed = Color(0xFF631207)
 val lightRed = Color(0xFF9B392B)
+
+//
+val SelectedWord = Color(0xB900CDFF)

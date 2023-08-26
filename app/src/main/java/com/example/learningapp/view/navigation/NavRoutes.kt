@@ -14,4 +14,5 @@ object NavRoutes {
     const val MOTIVATION_SCREEN = "MotivationScreen"
     const val FUN_SCREEN = "FunScreen"
     const val HOW_DO_YOU_SAY_SCREEN = "FunScreen"
+    const val HEAR_AND_CHOOSE_SCREEN = "HearAndChooseWordScreen"
 }
