@@ -43,4 +43,7 @@
     <string name="btn_check">CHECK</string>
     <string name="btn_cant_listen">CAN\'T LISTEN NOW</string>
     <string name="what_do_you_hear">What do you hear?</string>
+    <string name="zulu">Sawubona, mama.</string>
+    <string name="skip">Skip</string>
+    <string name="check">Check</string>
 </resources>
