@@ -153,7 +153,7 @@ fun SignInEmailScreen(navController: NavController) {
                 contentColor = Color.DarkGray
             ),
             onClick = {
-                signInSignUpViewModel.login(userName,password)
+                signInSignUpViewModel.registerUserUsingEmail(userName,password)
             },
             modifier = Modifier
                 .fillMaxWidth()
