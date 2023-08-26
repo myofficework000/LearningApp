@@ -3,6 +3,8 @@ package com.example.learningapp.view.screen
 import android.app.Activity
 import android.content.Context
 import android.util.Log
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -36,11 +38,15 @@ import androidx.constraintlayout.compose.Dimension
 import androidx.navigation.NavController
 import com.example.learningapp.R
 import com.example.learningapp.view.screen.utils.showToast
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.common.api.ApiException
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthOptions
 import com.google.firebase.auth.PhoneAuthProvider
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import java.util.concurrent.TimeUnit
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -51,6 +57,18 @@ fun SignInScreen(navController: NavController) {
     var areaCode by remember { mutableStateOf("") }
     var mobileNumber by remember { mutableStateOf("") }
     var verificationCode by remember { mutableStateOf("") }
+
+    //Related to goggle Sign IN
+    var user by remember { mutableStateOf(Firebase.auth.currentUser) }
+    val launcher = rememberFirebaseAuthLauncher(
+        onAuthComplete = { result ->
+            user = result.user
+        },
+        onAuthError = {
+            user = null
+        }
+    )
+    val token = stringResource(R.string.default_web_client_id)
 
     ConstraintLayout(
         Modifier
@@ -141,7 +159,9 @@ fun SignInScreen(navController: NavController) {
                 containerColor = Color.Transparent,
                 contentColor = Color.Black
             ),
-            onClick = { /* Handle Google login */ },
+            onClick = {
+                googleSignInRequest(context, token, launcher)
+            },
             modifier = Modifier
                 .fillMaxWidth()
                 .border(
@@ -293,4 +313,3 @@ private fun getPhoneAuthCallBack() =
 object SendOtp {
     var storedVerificationId: String? = ""
 }
-
