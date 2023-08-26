@@ -28,7 +28,7 @@
     <string name="reminder_notification">I\'ll remind you to practice so it becomes a habit</string>
     <string name="allow">Allow</string>
     <string name="do_not_allow">Don\'t allow</string>
-    <string name="send_notification">Do you allow Duolingo to send you notifications</string
+    <string name="send_notification">Do you allow Duolingo to send you notifications</string>
     <string name="the_girls">the_girls</string>
     <string name="the_boy">the_boy</string>
     <string name="the_women">the_women</string>
@@ -40,4 +40,7 @@
     <string name="it_can_be_hard_to_stay_motivated">It can be hard to stay motivated...</string>
     <string name="so_duolingo_fun_like_a_game">... so Duolingo is designed to be fun like a game!</string>
     <string name="choose_start_level">Now, let\'s find the best place to start!</string>
+    <string name="btn_check">CHECK</string>
+    <string name="btn_cant_listen">CAN\'T LISTEN NOW</string>
+    <string name="what_do_you_hear">What do you hear?</string>
 </resources>
