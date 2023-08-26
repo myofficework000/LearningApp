@@ -25,6 +25,7 @@ import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
 import com.example.learningapp.R
 import com.example.learningapp.view.navigation.NavRoutes
+import com.example.learningapp.view.screen.utils.OwlAnimation
 import com.example.learningapp.view.theme.Green40
 
 @Preview
