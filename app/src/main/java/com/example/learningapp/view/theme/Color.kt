@@ -3,6 +3,7 @@ package com.example.learningapp.view.theme
 import androidx.compose.ui.graphics.Color
 
 val HoloRed = Color(0xFFFF4444)
+val Orange = Color(0xFFDB540A)
 val White = Color(0xFFFFFFFF)
 val Blue = Color(0xFF2400FF)
 val veryDarkBlue = Color(0xFF001016)
@@ -53,3 +54,4 @@ val lightRed = Color(0xFF9B392B)
 
 //
 val SelectedWord = Color(0xB900CDFF)
+val ColorBlue = Color(0xFF03A8F8)

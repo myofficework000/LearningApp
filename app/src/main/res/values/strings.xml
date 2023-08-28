@@ -48,6 +48,9 @@
     <string name="zulu">Sawubona, mama.</string>
     <string name="skip">Skip</string>
     <string name="check">Check</string>
+    <string name="what_is_streak">What\'s a Streak?</string>
     <string name="brother">Brother</string>
     <string name="translate_sentence">Translate this Sentence</string>
+    <string name="streak_message">But your Streak will reset if you don\'t practice tomorrow. Watch out!</string>
+    <string name="streak_Count">A streak counts how many days you\'ve practiced in a row</string>
 </resources>
