@@ -50,6 +50,15 @@
     <string name="check">Check</string>
     <string name="brother">Brother</string>
     <string name="translate_sentence">Translate this Sentence</string>
+
+    <string name="btn_unlock_gift">EQUIP FOR FREE</string>
+    <string name="subtitle_unlock_gift">With these one-time Streak Freezes, you can miss one day of practice without losing your streak</string>
+    <string name="title_unlock_gift">You\'ve unlocked a gift!</string>
+    <string name="btn_get_app_for_free_CAPS">GET APP FOR FREE</string>
+    <string name="btn_no_thanks_CAPS">NO THANKS</string>
+    <string name="getapp_subtitle">fun and effective reading lessons for kids</string>
+    <string name="getapp_title">Check ours new app</string>
+
     <string name="day_7_streak">7 day streak</string>
     <string name="good">Good</string>
     <string name="complete1x">You\'ll be 1x more likely to complete the course!</string>
@@ -66,4 +75,5 @@
     <string name="what_is_streak_goal">Streak goals help you stay commited!</string>
     <string name="select_streak">Select Streak Goal</string>
     <string name="commit_goal">Commit To My Goal</string>
+
 </resources>
