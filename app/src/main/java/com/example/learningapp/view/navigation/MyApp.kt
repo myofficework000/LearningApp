@@ -6,6 +6,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.learningapp.view.navigation.NavRoutes.FRESH_START_SCREEN
 import com.example.learningapp.view.navigation.NavRoutes.FUN_SCREEN
+import com.example.learningapp.view.navigation.NavRoutes.GET_APP_SCREEN
 import com.example.learningapp.view.navigation.NavRoutes.GET_STARTED_SCREEN
 import com.example.learningapp.view.navigation.NavRoutes.HEAR_AND_CHOOSE_SCREEN
 import com.example.learningapp.view.navigation.NavRoutes.HEAR_FROM_SCREEN
@@ -22,9 +23,11 @@ import com.example.learningapp.view.navigation.NavRoutes.SIGN_IN_SCREEN
 import com.example.learningapp.view.navigation.NavRoutes.STREAK_SCREEN
 import com.example.learningapp.view.navigation.NavRoutes.TIME_CHOICE_SCREEN
 import com.example.learningapp.view.navigation.NavRoutes.TRANSLATE_SENTENCE_SCREEN
+import com.example.learningapp.view.navigation.NavRoutes.UNLOCKED_GIFT_SCREEN
 import com.example.learningapp.view.screen.AchievementScreen
 import com.example.learningapp.view.screen.FreshStartScreen
 import com.example.learningapp.view.screen.FunScreen
+import com.example.learningapp.view.screen.GetAppScreen
 import com.example.learningapp.view.screen.GetStartedScreen
 import com.example.learningapp.view.screen.HearAndChooseWordScreen
 import com.example.learningapp.view.screen.HearFromScreen
@@ -40,6 +43,7 @@ import com.example.learningapp.view.screen.SignInScreen
 import com.example.learningapp.view.screen.StreakScreen
 import com.example.learningapp.view.screen.TimesList
 import com.example.learningapp.view.screen.TranslateSentenceBrother
+import com.example.learningapp.view.screen.UnlockedGiftScreen
 
 @Composable
 fun MyApp() {
@@ -68,5 +72,7 @@ fun MyApp() {
         composable(route = STREAK_SCREEN) { StreakScreen(navController) }
         composable(route = TRANSLATE_SENTENCE_SCREEN) { TranslateSentenceBrother(navController) }
         composable(route = LETS_SCREEN) { LetsScreen(navController) }
+        composable(route = UNLOCKED_GIFT_SCREEN) { UnlockedGiftScreen(navController) }
+        composable(route = GET_APP_SCREEN) { GetAppScreen(navController) }
     }
 }

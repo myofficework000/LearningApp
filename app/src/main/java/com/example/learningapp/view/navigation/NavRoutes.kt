@@ -19,4 +19,6 @@ object NavRoutes {
     const val SIGN_IN_EMAIL_SCREEN = "SignInEmailScreen"
     const val STREAK_SCREEN = "StreakScreen"
     const val LETS_SCREEN = "LetsScreen"
+    const val UNLOCKED_GIFT_SCREEN = "UnlockedGiftScreen"
+    const val GET_APP_SCREEN = "GetAppScreen"
 }
