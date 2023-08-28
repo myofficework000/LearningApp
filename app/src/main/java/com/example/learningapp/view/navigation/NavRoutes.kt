@@ -13,6 +13,7 @@ object NavRoutes {
     const val SIGN_IN_SCREEN = "SignInScreen"
     const val MOTIVATION_SCREEN = "MotivationScreen"
     const val FUN_SCREEN = "FunScreen"
+    const val PRACTICE_MORE_SCREEN = "PracticeMoreScreen"
     const val TRANSLATE_SENTENCE_SCREEN = "TranslateSentenceScreen"
     const val HOW_DO_YOU_SAY_SCREEN = "FunScreen"
     const val HEAR_AND_CHOOSE_SCREEN = "HearAndChooseWordScreen"
@@ -22,7 +23,8 @@ object NavRoutes {
     const val STREAK_SCREEN = "StreakScreen"
     const val LETS_SCREEN = "LetsScreen"
     const val UNLOCKED_GIFT_SCREEN = "UnlockedGiftScreen"
-    const val GET_APP_SCREEN = "GetAppScreen"
+    const val GET_APP_SCREEN = "GetAppScreen
     const val TRANSLATE_SENTENCE_ZULU_SCREEN = "TranslateSentenceZuluScreen"
     const val SELECT_STREAK_GOAL_SCREEN = "SelectStreakGoalScreen"
+    const val CHAT_UI = "ChatUi
 }

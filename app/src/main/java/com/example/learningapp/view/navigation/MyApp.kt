@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.learningapp.view.navigation.NavRoutes.CHAT_UI
 import com.example.learningapp.view.navigation.NavRoutes.FRESH_START_SCREEN
 import com.example.learningapp.view.navigation.NavRoutes.FUN_SCREEN
 import com.example.learningapp.view.navigation.NavRoutes.GET_APP_SCREEN
@@ -27,6 +28,7 @@ import com.example.learningapp.view.navigation.NavRoutes.TRANSLATE_SENTENCE_SCRE
 import com.example.learningapp.view.navigation.NavRoutes.TRANSLATE_SENTENCE_ZULU_SCREEN
 import com.example.learningapp.view.navigation.NavRoutes.UNLOCKED_GIFT_SCREEN
 import com.example.learningapp.view.screen.AchievementScreen
+import com.example.learningapp.view.screen.ChatScreen
 import com.example.learningapp.view.screen.FreshStartScreen
 import com.example.learningapp.view.screen.FunScreen
 import com.example.learningapp.view.screen.GetAppScreen
@@ -77,8 +79,9 @@ fun MyApp() {
         composable(route = TRANSLATE_SENTENCE_SCREEN) { TranslateSentenceBrother(navController) }
         composable(route = LETS_SCREEN) { LetsScreen(navController) }
         composable(route = UNLOCKED_GIFT_SCREEN) { UnlockedGiftScreen(navController) }
-        composable(route = GET_APP_SCREEN) { GetAppScreen(navController) }
+        composable(route = GET_APP_SCREEN) { GetAppScreen(navController) 
         composable(route = TRANSLATE_SENTENCE_ZULU_SCREEN) { TranslateSentence(navController) }
-        composable(route = SELECT_STREAK_GOAL_SCREEN) { SelectStreak(navController) }
+        composable(route = SELECT_STREAK_GOAL_SCREEN) { SelectStreak(navController) 
+        composable(route = CHAT_UI) {ChatScreen(navController)
     }
 }

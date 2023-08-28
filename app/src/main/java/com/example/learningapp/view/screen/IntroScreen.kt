@@ -13,6 +13,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
@@ -25,13 +26,17 @@ import com.airbnb.lottie.compose.LottieAnimation
 import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.example.learningapp.R
-import com.example.learningapp.view.navigation.NavRoutes.GET_STARTED_SCREEN
+import com.example.learningapp.view.navigation.NavRoutes.CHAT_UI
 import com.example.learningapp.view.navigation.NavRoutes.SIGN_IN_EMAIL_SCREEN
 import com.example.learningapp.view.navigation.NavRoutes.SIGN_IN_SCREEN
+import com.example.learningapp.view.screen.utils.sendBigPictureStyleNotifications
+import com.example.learningapp.view.screen.utils.sendInboxStyleNotifications
 import com.example.learningapp.view.theme.Green40
 
 @Composable
 fun IntroScreen(navController: NavController) {
+    val context = LocalContext.current
+
     ConstraintLayout(modifier = Modifier.fillMaxSize()) {
         val guideline = createGuidelineFromTop(0.2f)
         val (imageView, imageTitle, textDesc, buttonStarted, buttonOutline) = createRefs()
@@ -94,7 +99,9 @@ fun IntroScreen(navController: NavController) {
             )
         }
 
-        OutlinedButton(onClick = { navController.navigate(SIGN_IN_SCREEN) },
+        OutlinedButton(onClick = {
+            navController.navigate(CHAT_UI)
+        },
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(horizontal = 16.dp, vertical = 16.dp)
