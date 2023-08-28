@@ -50,4 +50,9 @@
     <string name="check">Check</string>
     <string name="brother">Brother</string>
     <string name="translate_sentence">Translate this Sentence</string>
+    <string name="keep_your_streak_alive">Keep your streak alive!</string>
+    <string name="best_way_to_learn">Daily practice is the best way to learn a language. Let\'s go!</string>
+    <string name="i_m_ready">I\'M READY</string>
+    <string name="let_s_start_section">Let\'s start from Section 1: Rookie</string>
+    <string name="spanish_in_no_time">You\'ll be speaking Spanish in no time</string>
 </resources>
