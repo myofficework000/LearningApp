@@ -39,6 +39,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
+import androidx.navigation.NavController
 import com.airbnb.lottie.compose.LottieAnimation
 import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.rememberLottieComposition
@@ -48,9 +49,8 @@ import com.example.learningapp.view.theme.Green40
 import org.intellij.lang.annotations.JdkConstants.HorizontalAlignment
 
 @OptIn(ExperimentalLayoutApi::class)
-@Preview
 @Composable
-fun TranslateSentence(){
+fun TranslateSentence(navController: NavController){
     val initialWords = listOf(
         WordItem("Max"),
         WordItem("brother"),
@@ -100,6 +100,7 @@ fun TranslateSentence(){
                 ) {
                     Text(word)
                 }
+                Spacer(modifier = Modifier.width(5.dp))
             }
         }
 
@@ -124,11 +125,11 @@ fun TranslateSentence(){
         FlowRow(
             modifier = Modifier
                 .constrainAs(wordsRow){
-                    start.linkTo(parent.start, 50.dp)
-                    end.linkTo(parent.end, 50.dp)
+                    start.linkTo(parent.start)
+                    end.linkTo(parent.end)
                     top.linkTo(guideline2, 30.dp)
                 },
-            maxItemsInEachRow = 4,
+            maxItemsInEachRow = 5,
             horizontalArrangement = Arrangement.Center
         ) {
             availableWords.forEach{wordItem ->
@@ -154,6 +155,7 @@ fun TranslateSentence(){
                 ) {
                     Text(if (wordItem.isClicked) wordItem.placeholder else wordItem.word)
                 }
+                Spacer(modifier = Modifier.width(5.dp))
             }
         }
         Button(

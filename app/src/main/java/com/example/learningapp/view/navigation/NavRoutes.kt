@@ -23,4 +23,6 @@ object NavRoutes {
     const val LETS_SCREEN = "LetsScreen"
     const val UNLOCKED_GIFT_SCREEN = "UnlockedGiftScreen"
     const val GET_APP_SCREEN = "GetAppScreen"
+    const val TRANSLATE_SENTENCE_ZULU_SCREEN = "TranslateSentenceZuluScreen"
+    const val SELECT_STREAK_GOAL_SCREEN = "SelectStreakGoalScreen"
 }
