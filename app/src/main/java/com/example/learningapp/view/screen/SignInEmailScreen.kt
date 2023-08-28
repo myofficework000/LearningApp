@@ -1,5 +1,7 @@
 package com.example.learningapp.view.screen
 
+import android.content.Context
+import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -24,33 +26,59 @@ import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.example.learningapp.R
+import com.example.learningapp.view.screen.utils.showToast
+import com.example.learningapp.view.theme.GreyWhite
+import com.example.learningapp.viewmodel.SignInSignUpViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SignInEmailScreen(navController: NavController) {
+    val context = LocalContext.current
+    val signInSignUpViewModel: SignInSignUpViewModel = viewModel()
+
     var userName by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
     var isPwdVisible by remember { mutableStateOf(false) }
+
+    val loginStatus = signInSignUpViewModel.loginStatus.observeAsState()
+    val registrationStatus = signInSignUpViewModel.registrationStatus.observeAsState()
+    val registrationEmailStatus = signInSignUpViewModel.registrationEmailStatus.observeAsState()
+
+    loginStatus.value?.let {
+        showToast(context, it)
+    }
+
+    registrationStatus.value?.let {
+        showToast(context, it)
+    }
+
+    registrationEmailStatus.value?.let {
+        showToast(context, it)
+    }
+
     ConstraintLayout(
         Modifier
             .fillMaxSize()
             .padding(16.dp)
     ) {
-        val (staticText, areaInfo, forgotPwdButton, signInButton, googleButton, facebookButton) = createRefs()
+        val (staticText, areaInfo, forgotPwdButton, signInButton,RegisterButton, googleButton, facebookButton) = createRefs()
 
         Text(
             fontSize = 25.sp,
@@ -104,10 +132,12 @@ fun SignInEmailScreen(navController: NavController) {
 
         Button(
             colors = ButtonDefaults.buttonColors(
-                containerColor = Color.Gray,
+                containerColor = GreyWhite,
                 contentColor = Color.DarkGray
             ),
-            onClick = { },
+            onClick = {
+                signInSignUpViewModel.login(userName,password)
+            },
             modifier = Modifier
                 .fillMaxWidth()
                 .constrainAs(signInButton) {
@@ -115,7 +145,26 @@ fun SignInEmailScreen(navController: NavController) {
                     start.linkTo(parent.start)
                     end.linkTo(parent.end)
                 }) {
-            Text("SIGN IN")
+            Text("Sign In",
+                    modifier = Modifier.padding(vertical = 8.dp))
+        }
+        Button(
+            colors = ButtonDefaults.buttonColors(
+                containerColor = GreyWhite,
+                contentColor = Color.DarkGray
+            ),
+            onClick = {
+                signInSignUpViewModel.registerUserUsingEmail(userName,password)
+            },
+            modifier = Modifier
+                .fillMaxWidth()
+                .constrainAs(RegisterButton) {
+                    top.linkTo(signInButton.bottom, 16.dp)
+                    start.linkTo(parent.start)
+                    end.linkTo(parent.end)
+                }) {
+            Text("REGISTER",
+                modifier = Modifier.padding(vertical = 8.dp))
         }
 
         TextButton(
@@ -125,7 +174,7 @@ fun SignInEmailScreen(navController: NavController) {
             ),
             onClick = {},
             modifier = Modifier.constrainAs(forgotPwdButton) {
-                top.linkTo(signInButton.bottom)
+                top.linkTo(RegisterButton.bottom)
                 start.linkTo(parent.start)
                 end.linkTo(parent.end)
             }
@@ -201,3 +250,4 @@ fun SignInEmailScreen(navController: NavController) {
 
     }
 }
+
