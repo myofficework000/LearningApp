@@ -50,4 +50,20 @@
     <string name="check">Check</string>
     <string name="brother">Brother</string>
     <string name="translate_sentence">Translate this Sentence</string>
+    <string name="day_7_streak">7 day streak</string>
+    <string name="good">Good</string>
+    <string name="complete1x">You\'ll be 1x more likely to complete the course!</string>
+    <string name="day_14_streak">14 day streak</string>
+    <string name="great">Great</string>
+    <string name="complete5x">You\'ll be 5x more likely to complete the course!</string>
+    <string name="day_30_streak">30 day streak</string>
+    <string name="incredible">Incredible</string>
+    <string name="complete25x">You\'ll be 25x more likely to complete the course!</string>
+    <string name="day_50_streak">50 day streak</string>
+    <string name="unstoppable">Unstoppable</string>
+    <string name="complete125x">You\'ll be 125x more likely to complete the course!</string>
+    <string name="commit_to_learn">Commit to learning Spanish!</string>
+    <string name="what_is_streak_goal">Streak goals help you stay commited!</string>
+    <string name="select_streak">Select Streak Goal</string>
+    <string name="commit_goal">Commit To My Goal</string>
 </resources>
