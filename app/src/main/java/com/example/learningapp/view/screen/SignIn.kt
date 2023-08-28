@@ -35,6 +35,7 @@ import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
 import androidx.navigation.NavController
 import com.example.learningapp.R
+import com.example.learningapp.view.navigation.NavRoutes.SIGN_IN_EMAIL_SCREEN
 import com.example.learningapp.view.screen.utils.showToast
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.FirebaseAuth
@@ -223,7 +224,7 @@ fun SignInScreen(navController: NavController) {
                 containerColor = Color.Transparent,
                 contentColor = Color.Black
             ),
-            onClick = { /* Handle Email login */ },
+            onClick = { navController.navigate(SIGN_IN_EMAIL_SCREEN) },
             modifier = Modifier
                 .fillMaxWidth()
                 .border(

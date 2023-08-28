@@ -53,4 +53,30 @@
     <string name="translate_sentence">Translate this Sentence</string>
     <string name="streak_message">But your Streak will reset if you don\'t practice tomorrow. Watch out!</string>
     <string name="streak_Count">A streak counts how many days you\'ve practiced in a row</string>
+
+    <string name="btn_unlock_gift">EQUIP FOR FREE</string>
+    <string name="subtitle_unlock_gift">With these one-time Streak Freezes, you can miss one day of practice without losing your streak</string>
+    <string name="title_unlock_gift">You\'ve unlocked a gift!</string>
+    <string name="btn_get_app_for_free_CAPS">GET APP FOR FREE</string>
+    <string name="btn_no_thanks_CAPS">NO THANKS</string>
+    <string name="getapp_subtitle">fun and effective reading lessons for kids</string>
+    <string name="getapp_title">Check ours new app</string>
+
+    <string name="day_7_streak">7 day streak</string>
+    <string name="good">Good</string>
+    <string name="complete1x">You\'ll be 1x more likely to complete the course!</string>
+    <string name="day_14_streak">14 day streak</string>
+    <string name="great">Great</string>
+    <string name="complete5x">You\'ll be 5x more likely to complete the course!</string>
+    <string name="day_30_streak">30 day streak</string>
+    <string name="incredible">Incredible</string>
+    <string name="complete25x">You\'ll be 25x more likely to complete the course!</string>
+    <string name="day_50_streak">50 day streak</string>
+    <string name="unstoppable">Unstoppable</string>
+    <string name="complete125x">You\'ll be 125x more likely to complete the course!</string>
+    <string name="commit_to_learn">Commit to learning Spanish!</string>
+    <string name="what_is_streak_goal">Streak goals help you stay commited!</string>
+    <string name="select_streak">Select Streak Goal</string>
+    <string name="commit_goal">Commit To My Goal</string>
+
 </resources>
