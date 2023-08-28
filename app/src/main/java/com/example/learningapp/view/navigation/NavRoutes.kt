@@ -17,4 +17,5 @@ object NavRoutes {
     const val HOW_DO_YOU_SAY_SCREEN = "FunScreen"
     const val HEAR_AND_CHOOSE_SCREEN = "HearAndChooseWordScreen"
     const val SIGN_IN_EMAIL_SCREEN = "SignInEmailScreen"
+    const val UNLOCKED_GIFT_SCREEN = "UnlockedGiftScreen"
 }

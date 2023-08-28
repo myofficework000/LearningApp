@@ -50,4 +50,7 @@
     <string name="check">Check</string>
     <string name="brother">Brother</string>
     <string name="translate_sentence">Translate this Sentence</string>
+    <string name="btn_unlock_gift">EQUIP FOR FREE</string>
+    <string name="subtitle_unlock_gift">With these one-time Streak Freezes, you can miss one day of practice without losing your streak</string>
+    <string name="title_unlock_gift">You\'ve unlocked a gift!</string>
 </resources>

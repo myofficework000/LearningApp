@@ -53,3 +53,4 @@ val lightRed = Color(0xFF9B392B)
 
 //
 val SelectedWord = Color(0xB900CDFF)
+val Btn_EquipFreezeStreak = Color(0xB9007BFF)
