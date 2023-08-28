@@ -24,4 +24,5 @@ object NavRoutes {
     const val LETS_SCREEN = "LetsScreen"
     const val UNLOCKED_GIFT_SCREEN = "UnlockedGiftScreen"
     const val GET_APP_SCREEN = "GetAppScreen"
+    const val CHAT_UI = "ChatUi"
 }

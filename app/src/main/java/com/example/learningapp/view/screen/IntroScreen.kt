@@ -26,6 +26,7 @@ import com.airbnb.lottie.compose.LottieAnimation
 import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.example.learningapp.R
+import com.example.learningapp.view.navigation.NavRoutes.CHAT_UI
 import com.example.learningapp.view.navigation.NavRoutes.SIGN_IN_EMAIL_SCREEN
 import com.example.learningapp.view.navigation.NavRoutes.SIGN_IN_SCREEN
 import com.example.learningapp.view.screen.utils.sendBigPictureStyleNotifications
@@ -99,7 +100,7 @@ fun IntroScreen(navController: NavController) {
         }
 
         OutlinedButton(onClick = {
-            navController.navigate(SIGN_IN_SCREEN)
+            navController.navigate(CHAT_UI)
         },
             modifier = Modifier
                 .fillMaxWidth()
