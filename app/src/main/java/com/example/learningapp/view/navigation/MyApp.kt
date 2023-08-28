@@ -16,9 +16,11 @@ import com.example.learningapp.view.navigation.NavRoutes.INTRO_SCREEN
 import com.example.learningapp.view.navigation.NavRoutes.KNOWLEDGE_SCREEN
 import com.example.learningapp.view.navigation.NavRoutes.LANGUAGE_LIST
 import com.example.learningapp.view.navigation.NavRoutes.LEARNING_REASON_SCREEN
+import com.example.learningapp.view.navigation.NavRoutes.LETS_SCREEN
 import com.example.learningapp.view.navigation.NavRoutes.MOTIVATION_SCREEN
 import com.example.learningapp.view.navigation.NavRoutes.SIGN_IN_EMAIL_SCREEN
 import com.example.learningapp.view.navigation.NavRoutes.SIGN_IN_SCREEN
+import com.example.learningapp.view.navigation.NavRoutes.STREAK_SCREEN
 import com.example.learningapp.view.navigation.NavRoutes.TIME_CHOICE_SCREEN
 import com.example.learningapp.view.navigation.NavRoutes.TRANSLATE_SENTENCE_SCREEN
 import com.example.learningapp.view.navigation.NavRoutes.UNLOCKED_GIFT_SCREEN
@@ -34,9 +36,11 @@ import com.example.learningapp.view.screen.IntroScreen
 import com.example.learningapp.view.screen.KnowledgeScreen
 import com.example.learningapp.view.screen.LanguagesList
 import com.example.learningapp.view.screen.LearningReason
+import com.example.learningapp.view.screen.LetsScreen
 import com.example.learningapp.view.screen.MotivationScreen
 import com.example.learningapp.view.screen.SignInEmailScreen
 import com.example.learningapp.view.screen.SignInScreen
+import com.example.learningapp.view.screen.StreakScreen
 import com.example.learningapp.view.screen.TimesList
 import com.example.learningapp.view.screen.TranslateSentenceBrother
 import com.example.learningapp.view.screen.UnlockedGiftScreen
@@ -65,9 +69,10 @@ fun MyApp() {
         composable(route = HOW_DO_YOU_SAY_SCREEN) { HowDoYouSay(navController) }
         composable(route = HEAR_AND_CHOOSE_SCREEN) { HearAndChooseWordScreen(navController) }
         composable(route = SIGN_IN_EMAIL_SCREEN) { SignInEmailScreen(navController) }
+        composable(route = STREAK_SCREEN) { StreakScreen(navController) }
         composable(route = TRANSLATE_SENTENCE_SCREEN) { TranslateSentenceBrother(navController) }
+        composable(route = LETS_SCREEN) { LetsScreen(navController) }
         composable(route = UNLOCKED_GIFT_SCREEN) { UnlockedGiftScreen(navController) }
         composable(route = GET_APP_SCREEN) { GetAppScreen(navController) }
     }
 }
-
