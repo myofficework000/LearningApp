@@ -18,4 +18,5 @@ object NavRoutes {
     const val HEAR_AND_CHOOSE_SCREEN = "HearAndChooseWordScreen"
     const val SIGN_IN_EMAIL_SCREEN = "SignInEmailScreen"
     const val UNLOCKED_GIFT_SCREEN = "UnlockedGiftScreen"
+    const val GET_APP_SCREEN = "GetAppScreen"
 }

@@ -45,7 +45,7 @@ fun UnlockedGiftScreen(navController: NavController) {
 
     ConstraintLayout(modifier = Modifier.fillMaxSize()) {
         val guideline = createGuidelineFromTop(0.2f)
-        val (imageView, imageTitle, textDesc, buttonStarted) = createRefs()
+        val (imageView, txtTitle, txtSubtitle, btnUnlock) = createRefs()
 
         LottieAnimation(
             composition = rawComposition,
@@ -64,7 +64,7 @@ fun UnlockedGiftScreen(navController: NavController) {
             fontWeight = FontWeight.Bold,
             modifier = Modifier
                 .padding(top = 16.dp, end = 16.dp, start = 16.dp)
-                .constrainAs(imageTitle) {
+                .constrainAs(txtTitle) {
                     start.linkTo(parent.start)
                     end.linkTo(parent.end)
                     top.linkTo(imageView.bottom)
@@ -76,10 +76,10 @@ fun UnlockedGiftScreen(navController: NavController) {
             fontSize = 20.sp,
             modifier = Modifier
                 .padding(top = 16.dp, end = 16.dp, start = 16.dp)
-                .constrainAs(textDesc) {
+                .constrainAs(txtSubtitle) {
                     start.linkTo(parent.start)
                     end.linkTo(parent.end)
-                    top.linkTo(imageTitle.bottom)
+                    top.linkTo(txtTitle.bottom)
                 })
 
         Button(onClick = {
@@ -88,7 +88,7 @@ fun UnlockedGiftScreen(navController: NavController) {
             colors = ButtonDefaults.buttonColors(Btn_EquipFreezeStreak),
             modifier = Modifier
                 .fillMaxWidth()
-                .constrainAs(buttonStarted) {
+                .constrainAs(btnUnlock) {
                     start.linkTo(parent.start)
                     end.linkTo(parent.end)
                     bottom.linkTo(parent.bottom)
