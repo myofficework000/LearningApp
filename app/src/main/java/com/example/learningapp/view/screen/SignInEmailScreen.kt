@@ -60,6 +60,7 @@ fun SignInEmailScreen(navController: NavController) {
     val loginStatus = signInSignUpViewModel.loginStatus.observeAsState()
     val registrationStatus = signInSignUpViewModel.registrationStatus.observeAsState()
     val registrationEmailStatus = signInSignUpViewModel.registrationEmailStatus.observeAsState()
+    val savedToFireStore = signInSignUpViewModel.savedToFireStore.observeAsState()
 
     loginStatus.value?.let {
         showToast(context, it)
@@ -73,12 +74,16 @@ fun SignInEmailScreen(navController: NavController) {
         showToast(context, it)
     }
 
+    savedToFireStore.value?.let {
+        showToast(context, it)
+    }
+
     ConstraintLayout(
         Modifier
             .fillMaxSize()
             .padding(16.dp)
     ) {
-        val (staticText, areaInfo, forgotPwdButton, signInButton,RegisterButton, googleButton, facebookButton) = createRefs()
+        val (staticText, areaInfo, forgotPwdButton, signInButton, RegisterButton, googleButton, facebookButton) = createRefs()
 
         Text(
             fontSize = 25.sp,
@@ -136,7 +141,7 @@ fun SignInEmailScreen(navController: NavController) {
                 contentColor = Color.DarkGray
             ),
             onClick = {
-                signInSignUpViewModel.login(userName,password)
+                signInSignUpViewModel.login(userName, password)
             },
             modifier = Modifier
                 .fillMaxWidth()
@@ -145,8 +150,10 @@ fun SignInEmailScreen(navController: NavController) {
                     start.linkTo(parent.start)
                     end.linkTo(parent.end)
                 }) {
-            Text("Sign In",
-                    modifier = Modifier.padding(vertical = 8.dp))
+            Text(
+                "Sign In",
+                modifier = Modifier.padding(vertical = 8.dp)
+            )
         }
         Button(
             colors = ButtonDefaults.buttonColors(
@@ -154,7 +161,7 @@ fun SignInEmailScreen(navController: NavController) {
                 contentColor = Color.DarkGray
             ),
             onClick = {
-                signInSignUpViewModel.registerUserUsingEmail(userName,password)
+                signInSignUpViewModel.registerUserUsingEmail(userName, password)
             },
             modifier = Modifier
                 .fillMaxWidth()
@@ -163,8 +170,10 @@ fun SignInEmailScreen(navController: NavController) {
                     start.linkTo(parent.start)
                     end.linkTo(parent.end)
                 }) {
-            Text("REGISTER",
-                modifier = Modifier.padding(vertical = 8.dp))
+            Text(
+                "REGISTER",
+                modifier = Modifier.padding(vertical = 8.dp)
+            )
         }
 
         TextButton(

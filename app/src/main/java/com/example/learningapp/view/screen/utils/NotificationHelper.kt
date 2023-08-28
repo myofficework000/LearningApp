@@ -20,7 +20,7 @@ private fun createNotificationChannel(context: Context) {
         context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-        val importance = NotificationManager.IMPORTANCE_MAX
+        val importance = NotificationManager.IMPORTANCE_HIGH
         val channel = NotificationChannel(CHANNEL_ID, "ChannelDescription", importance)
             .also {
                 it.enableLights(true)
@@ -126,3 +126,24 @@ fun sendBigPictureStyleNotifications(
     }
     notificationManager.notify(302, notificationBuilder.build())
 }
+
+/*makeSimpleNotification(
+            context = context,
+            "title of notification",
+            "content of notification",
+            R.drawable.ic_facebook
+        )*/
+
+/*sendInboxStyleNotifications(
+    context = context,
+    "title of notification",
+    "content of notification",
+    R.drawable.ic_facebook
+)*/
+
+/*sendBigPictureStyleNotifications(
+    context = context,
+    "title of notification",
+    "content of notification",
+    R.drawable.ic_facebook
+)*/

@@ -27,6 +27,7 @@ import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.example.learningapp.R
 import com.example.learningapp.view.navigation.NavRoutes.SIGN_IN_EMAIL_SCREEN
+import com.example.learningapp.view.navigation.NavRoutes.SIGN_IN_SCREEN
 import com.example.learningapp.view.screen.utils.sendBigPictureStyleNotifications
 import com.example.learningapp.view.screen.utils.sendInboxStyleNotifications
 import com.example.learningapp.view.theme.Green40
@@ -98,27 +99,7 @@ fun IntroScreen(navController: NavController) {
         }
 
         OutlinedButton(onClick = {
-            /*makeSimpleNotification(
-                context = context,
-                "title of notification",
-                "content of notification",
-                R.drawable.ic_facebook
-            )*/
-
-            /*sendInboxStyleNotifications(
-                context = context,
-                "title of notification",
-                "content of notification",
-                R.drawable.ic_facebook
-            )*/
-
-            sendBigPictureStyleNotifications(
-                context = context,
-                "title of notification",
-                "content of notification",
-                R.drawable.ic_facebook
-            )
-            /*navController.navigate(SIGN_IN_SCREEN) */
+            navController.navigate(SIGN_IN_SCREEN)
         },
             modifier = Modifier
                 .fillMaxWidth()
