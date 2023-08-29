@@ -81,4 +81,7 @@
     <string name="what_is_streak_goal">Streak goals help you stay commited!</string>
     <string name="select_streak">Select Streak Goal</string>
     <string name="commit_goal">Commit To My Goal</string>
+    <string name="unit_1">Unit 1</string>
+    <string name="form_basic_sentences">Form basic sentences, greet people</string>
+    <string name="start">START</string>
 </resources>
