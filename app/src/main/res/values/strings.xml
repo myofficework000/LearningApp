@@ -81,4 +81,6 @@
     <string name="what_is_streak_goal">Streak goals help you stay commited!</string>
     <string name="select_streak">Select Streak Goal</string>
     <string name="commit_goal">Commit To My Goal</string>
+    <string name="daily_quests_title">Daily Quests</string>
+    <string name="earn_rewards_with_quests_title">Earn rewards with quests!</string>
 </resources>

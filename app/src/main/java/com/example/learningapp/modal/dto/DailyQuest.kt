@@ -8,5 +8,4 @@ data class DailyQuest(
     val process: Int,
     val maxProcess: Int,
     @DrawableRes val thumbnailImg:Int,
-    @DrawableRes val chestImg:Int,
 )
