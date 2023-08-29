@@ -29,15 +29,12 @@ import com.example.learningapp.view.screen.HearAndChooseWordScreen
 import com.example.learningapp.view.theme.Purple40
 import com.example.learningapp.view.theme.QuestAndBadge_TabBackGround
 
-/////testing
 @Preview(showBackground = true)
 @Composable
 fun PreviewQuestAndBadgeScreen() {
     QuestAndBadgeScreen(rememberNavController())
 }
-/////////
 
-// Use QuestAndBadgeScreen() as main
 @Composable
 fun QuestAndBadgeScreen(navController: NavController){
     var tabIndex by remember { mutableIntStateOf(0) }

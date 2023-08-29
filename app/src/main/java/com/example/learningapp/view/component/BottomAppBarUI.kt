@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Badge
 import androidx.compose.material.icons.filled.Face
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Leaderboard
@@ -73,6 +74,13 @@ fun BottomAppBarUI(navController: NavController) {
             selected = navItemState.value,
             onClick = { navController.navigate(Screen.Learning.route) }
         )
+
+        NavigationBarItem(
+            icon = { Icon(imageVector = Icons.Default.Badge, contentDescription = null) },
+            selected = navItemState.value,
+            onClick = { navController.navigate(Screen.QuestAndBadges.route) }
+        )
+
 
         NavigationBarItem(
             icon = { Icon(imageVector = Icons.Default.Face, contentDescription = null) },

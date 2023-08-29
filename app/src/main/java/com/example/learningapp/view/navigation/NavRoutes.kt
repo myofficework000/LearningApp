@@ -32,4 +32,5 @@ object NavRoutes {
     const val LEADER_BOARD = "LeaderBoard"
     const val ACCOUNT = "Account"
     const val LEARNING = "Learning"
+    const val QUEST_AND_BADGES = "QuestAndBadges"
 }

@@ -3,9 +3,6 @@ package com.example.learningapp.view.screen.quest_and_badge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -15,7 +12,6 @@ import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -41,13 +37,8 @@ import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.example.learningapp.R
 import com.example.learningapp.modal.dto.DailyQuest
-import com.example.learningapp.modal.dto.Word
-import com.example.learningapp.view.screen.WordViewHolder
-import com.example.learningapp.view.screen.getListOfWord
 import com.example.learningapp.view.theme.Green100
-import com.example.learningapp.view.theme.Green40
 import com.example.learningapp.view.theme.QuestAndBadge_TabBackGround
-import com.example.learningapp.view.theme.SelectedWord
 import com.example.learningapp.view.theme.TimeLeft_txt
 
 
@@ -57,41 +48,44 @@ import com.example.learningapp.view.theme.TimeLeft_txt
 fun DemoQuestScreen() {
     QuestScreen()
 }
-/////////
+
 @Composable
-fun QuestScreen(){
+fun QuestScreen() {
     ConstraintLayout(
         modifier = Modifier
             .fillMaxWidth()
-            .wrapContentHeight()) {
+            .wrapContentHeight()
+    ) {
 
         val (earnRewardContainer, dailyQuestContainer) = createRefs()
         EarnRewardContainer(modifier =
-            Modifier.constrainAs(earnRewardContainer) {
-                top.linkTo(parent.top)
-                start.linkTo(parent.start)
-                end.linkTo(parent.end)
-                height = Dimension.wrapContent
-            })
+        Modifier.constrainAs(earnRewardContainer) {
+            top.linkTo(parent.top)
+            start.linkTo(parent.start)
+            end.linkTo(parent.end)
+            height = Dimension.wrapContent
+        })
         DailyQuestContainer(modifier =
-            Modifier.constrainAs(dailyQuestContainer) {
-                bottom.linkTo(parent.bottom)
-                start.linkTo(parent.start)
-                end.linkTo(parent.end)
-                top.linkTo(earnRewardContainer.bottom)
-                height = Dimension.wrapContent
-                width = Dimension.fillToConstraints
+        Modifier.constrainAs(dailyQuestContainer) {
+            bottom.linkTo(parent.bottom)
+            start.linkTo(parent.start)
+            end.linkTo(parent.end)
+            top.linkTo(earnRewardContainer.bottom)
+            height = Dimension.wrapContent
+            width = Dimension.fillToConstraints
         })
 
     }
 }
 
 @Composable
-fun EarnRewardContainer(modifier: Modifier){
-    ConstraintLayout(modifier = modifier
-        .background(QuestAndBadge_TabBackGround)
-        .fillMaxWidth()){
-        val ( title, subtitle, animation) = createRefs()
+fun EarnRewardContainer(modifier: Modifier) {
+    ConstraintLayout(
+        modifier = modifier
+            .background(QuestAndBadge_TabBackGround)
+            .fillMaxWidth()
+    ) {
+        val (title, subtitle, animation) = createRefs()
         val rawComposition by rememberLottieComposition(spec = LottieCompositionSpec.RawRes(R.raw.animation_owl))
 
         Text(
@@ -139,9 +133,9 @@ fun EarnRewardContainer(modifier: Modifier){
 }
 
 @Composable
-fun DailyQuestContainer(modifier: Modifier){
-    ConstraintLayout( modifier = modifier.fillMaxWidth()) {
-        val ( title, timeLeft, dailyQuestList) = createRefs()
+fun DailyQuestContainer(modifier: Modifier) {
+    ConstraintLayout(modifier = modifier.fillMaxWidth()) {
+        val (title, timeLeft, dailyQuestList) = createRefs()
 
         Text(
             text = stringResource(R.string.daily_quests_title),
@@ -183,14 +177,14 @@ fun DailyQuestContainer(modifier: Modifier){
                 }
         ) {
             items(getListOfQuest()) { quest ->
-                DailyQuestViewHolder(quest )
+                DailyQuestViewHolder(quest)
             }
         }
     }
 }
 
 @Composable
-fun DailyQuestViewHolder(dailyQuest: DailyQuest){
+fun DailyQuestViewHolder(dailyQuest: DailyQuest) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
@@ -222,6 +216,7 @@ fun DailyQuestViewHolder(dailyQuest: DailyQuest){
                     .padding(horizontal = 20.dp)
                     .constrainAs(title) {
                         start.linkTo(thumbnail.end)
+                        end.linkTo(parent.end)
                         top.linkTo(parent.top)
                         width = Dimension.wrapContent
                         height = Dimension.wrapContent
@@ -229,7 +224,7 @@ fun DailyQuestViewHolder(dailyQuest: DailyQuest){
             )
             ProgressItemCard(
                 dailyQuest = dailyQuest,
-                modifier = Modifier.constrainAs(progressBar){
+                modifier = Modifier.constrainAs(progressBar) {
                     start.linkTo(thumbnail.end)
                     top.linkTo(title.bottom)
                     width = Dimension.wrapContent
@@ -242,31 +237,36 @@ fun DailyQuestViewHolder(dailyQuest: DailyQuest){
 
 @Composable
 fun ProgressItemCard(dailyQuest: DailyQuest, modifier: Modifier) {
-    Row(
+    Box(
         modifier = modifier
             .wrapContentWidth()
-            .padding(16.dp) ,
+            .padding(24.dp),
     ) {
         LinearProgressIndicator(
             progress = dailyQuest.process.toFloat() / dailyQuest.maxProcess,
             color = Green100,
-            modifier = Modifier.height(18.dp)
+            modifier = Modifier
+                .height(24.dp)
+                .align(Alignment.Center)
         )
         Text(
             text = "${dailyQuest.process} / ${dailyQuest.maxProcess}",
             fontSize = 18.sp,
             fontWeight = FontWeight.Bold,
-            modifier = Modifier.padding(horizontal = 10.dp)
+            modifier = Modifier
+                .padding(horizontal = 10.dp)
+                .align(Alignment.Center)
         )
 
     }
 }
 
-fun getListOfQuest()= listOf(
-    DailyQuest("Earn 10 xp",5,10,R.drawable.lighting),
-    DailyQuest("Complete 1 lesson",0,1,R.drawable.nerd),
+fun getListOfQuest() = listOf(
+    DailyQuest("Earn 10 xp", 5, 10, R.drawable.lighting),
+    DailyQuest("Complete 1 lesson", 0, 1, R.drawable.nerd),
     DailyQuest(
-        "Score 90% or higher in 3 lessons",9,10,R.drawable.goal),
-    )
+        "Score 90% or higher in 3 lessons", 9, 10, R.drawable.goal
+    ),
+)
 
 

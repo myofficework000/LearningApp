@@ -52,7 +52,7 @@ fun BadgeScreen() {
                     end.linkTo(parent.end)
                     top.linkTo(guideline)
                 }, contentScale = ContentScale.Inside,
-            iterations = Int.MAX_VALUE
+            iterations = 1
         )
         Text(text = "Earn your first badge!",
             textAlign = TextAlign.Center,
