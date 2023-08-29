@@ -25,4 +25,11 @@ object NavRoutes {
     const val UNLOCKED_GIFT_SCREEN = "UnlockedGiftScreen"
     const val GET_APP_SCREEN = "GetAppScreen"
     const val CHAT_UI = "ChatUi"
+
+
+    // Main Screen Constants
+    const val HOME = "Home"
+    const val LEADER_BOARD = "LeaderBoard"
+    const val ACCOUNT = "Account"
+    const val LEARNING = "Learning"
 }

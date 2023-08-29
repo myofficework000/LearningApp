@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace = "com.example.learningapp"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.learningapp"
         minSdk = 23
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -64,6 +64,9 @@ dependencies {
     implementation("com.google.android.gms:play-services-auth:20.6.0")
     implementation("com.google.firebase:firebase-firestore-ktx:24.7.1")
     implementation("com.google.firebase:firebase-database-ktx:20.2.2")
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("com.google.android.material:material:1.9.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
@@ -84,5 +87,8 @@ dependencies {
 
     // For Observing the state of Livedata in Compose
     implementation("androidx.compose.runtime:runtime-livedata:1.5.0")
+
+    //For More material Icons
+    implementation("androidx.compose.material:material-icons-extended:1.5.0")
 
 }
