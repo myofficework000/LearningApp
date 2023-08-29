@@ -58,3 +58,7 @@ val Btn_EquipFreezeStreak = Color(0xB9007BFF)
 val GetApp_Background = Color(0xB9007BFF)
 val GetApp_Btn_Text = Color(0xB9007BFF)
 val ColorBlue = Color(0xFF03A8F8)
+val QuestAndBadge_TabBackGround = Color(0xFF6650a4)
+
+// Quest and Badge
+val TimeLeft_txt = Color(0xFFfa8231)
