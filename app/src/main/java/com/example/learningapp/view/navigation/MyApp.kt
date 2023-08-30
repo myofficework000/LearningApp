@@ -79,9 +79,9 @@ fun MyApp() {
         composable(route = TRANSLATE_SENTENCE_SCREEN) { TranslateSentenceBrother(navController) }
         composable(route = LETS_SCREEN) { LetsScreen(navController) }
         composable(route = UNLOCKED_GIFT_SCREEN) { UnlockedGiftScreen(navController) }
-        composable(route = GET_APP_SCREEN) { GetAppScreen(navController) 
+        composable(route = GET_APP_SCREEN) { GetAppScreen(navController) }
         composable(route = TRANSLATE_SENTENCE_ZULU_SCREEN) { TranslateSentence(navController) }
-        composable(route = SELECT_STREAK_GOAL_SCREEN) { SelectStreak(navController) 
-        composable(route = CHAT_UI) {ChatScreen(navController)
+        composable(route = SELECT_STREAK_GOAL_SCREEN) { SelectStreak(navController) }
+        composable(route = CHAT_UI) {ChatScreen(navController)    }
     }
 }
