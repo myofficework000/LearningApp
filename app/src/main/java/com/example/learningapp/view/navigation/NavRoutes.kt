@@ -26,5 +26,13 @@ object NavRoutes {
     const val GET_APP_SCREEN = "GetAppScreen
     const val TRANSLATE_SENTENCE_ZULU_SCREEN = "TranslateSentenceZuluScreen"
     const val SELECT_STREAK_GOAL_SCREEN = "SelectStreakGoalScreen"
-    const val CHAT_UI = "ChatUi
+    const val CHAT_UI = "ChatU
+
+
+    // Main Screen Constants
+    const val HOME = "Home"
+    const val LEADER_BOARD = "LeaderBoard"
+    const val ACCOUNT = "Account"
+    const val LEARNING = "Learning"
+    const val QUEST_AND_BADGES = "QuestAndBadges"
 }
