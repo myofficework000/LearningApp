@@ -48,6 +48,7 @@ val holoGreen = Color(0xFF9ff39f)
 // Theme: Green
 val darkGreen = Color(0xFF084E08)
 val lightGreen = Color(0xFF219921)
+val DarkGreen1 = Color(0xFF129B8D)
 
 // Theme: Red
 val darkRed = Color(0xFF631207)
@@ -63,3 +64,5 @@ val QuestAndBadge_TabBackGround = Color(0xFF6650a4)
 
 // Quest and Badge
 val TimeLeft_txt = Color(0xFFfa8231)
+val LightBlue1 = Color(0xFFB7D0DB)
+val ColorYellow = Color(0xFFFFBF27)
