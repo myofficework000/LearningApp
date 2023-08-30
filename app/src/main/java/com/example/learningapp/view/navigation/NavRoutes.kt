@@ -23,8 +23,10 @@ object NavRoutes {
     const val STREAK_SCREEN = "StreakScreen"
     const val LETS_SCREEN = "LetsScreen"
     const val UNLOCKED_GIFT_SCREEN = "UnlockedGiftScreen"
-    const val GET_APP_SCREEN = "GetAppScreen"
-    const val CHAT_UI = "ChatUi"
+    const val GET_APP_SCREEN = "GetAppScreen
+    const val TRANSLATE_SENTENCE_ZULU_SCREEN = "TranslateSentenceZuluScreen"
+    const val SELECT_STREAK_GOAL_SCREEN = "SelectStreakGoalScreen"
+    const val CHAT_UI = "ChatU
 
 
     // Main Screen Constants
