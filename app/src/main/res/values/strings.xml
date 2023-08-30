@@ -88,5 +88,29 @@
     <string name="unit_1">Unit 1</string>
     <string name="form_basic_sentences">Form basic sentences, greet people</string>
     <string name="start">START</string>
+    <string name="celebrate_achievements_with_friends">Celebrate \nachievements \nwith friends!</string>
+    <string name="add_friends">ADD FRIENDS</string>
+    <string name="streak">Streak</string>
+    <string name="a_lesson_every_day">Complete a lesson every day to \nmaintain your streak!</string>
+    <string name="start_a_lesson">START A LESSON</string>
+    <string name="tune_into_learning">"Tune into learning! 🎵 "</string>
+    <string name="here_are_4_tips">Here are 4 tips \nfor studying language with music!</string>
+    <string name="these_are">"These are "</string>
+    <string name="_8_common_mistakes">"8 common mistakes "</string>
+    <string name="to_watch_out_for_during_your_lessons">to watch out for during your lessons!</string>
+    <string name="_12_days">12 days</string>
+    <string name="what_wil_english_sound_like_in_100_years">"What wil English sound like in 100 years? "</string>
+    <string name="here_are_our_predictions">Here are our predictions!</string>
+    <string name="_26_days">26 days</string>
+    <string name="our_brains_are_built">"Our brains are built for learning... but \nhow do they do it? "</string>
+    <string name="it_s_all_about_tracking_patterns">It\'s all about \ntracking patterns!</string>
+    <string name="welcome_to_your_feed">Welcome to your Feed! Check back \nperiodically for the latest updates from \nDuolingo.</string>
+    <string name="_742_days">742 days</string>
+    <string name="_6_days">6 days</string>
+    <string name="awesome">AWESOME</string>
+    <string name="you_added_a_profile_picture">You added a profile picture</string>
+    <string name="you_leveled_up">You leveled up the \nPhotogenic achievement!</string>
+    <string name="don_t_spend">Don\'t spend them all in one place.</string>
+    <string name="you_earned_25_gems">You earned 25 gems!</string>
 
 </resources>

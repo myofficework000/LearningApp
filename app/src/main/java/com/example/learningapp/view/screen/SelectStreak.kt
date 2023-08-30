@@ -34,15 +34,15 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
+import androidx.navigation.NavController
 import com.example.learningapp.R
 import com.example.learningapp.modal.dto.StreakGoal
 import com.example.learningapp.view.screen.utils.OwlAnimation
 import com.example.learningapp.view.theme.Blue100
 import com.example.learningapp.view.theme.Orange100
 
-@Preview
 @Composable
-fun SelectStreak(){
+fun SelectStreak(navController: NavController){
     val streaks = listOf(
         StreakGoal(stringResource(R.string.day_7_streak), stringResource(R.string.good), stringResource(R.string.complete1x)),
         StreakGoal(stringResource(R.string.day_14_streak), stringResource(R.string.great), stringResource(R.string.complete5x)),
