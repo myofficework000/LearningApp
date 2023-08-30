@@ -39,11 +39,11 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
+import androidx.navigation.NavController
 import com.example.learningapp.R
 import com.example.learningapp.modal.dto.Statistics
 import com.example.learningapp.view.theme.ColorBlue
@@ -54,9 +54,9 @@ import com.example.learningapp.view.theme.LightGrey
 import com.example.learningapp.view.theme.lightBlack
 
 
-@Preview(showBackground = true)
+
 @Composable
-fun ProfileScreen() {
+fun ProfileScreen(navController: NavController) {
     val state = rememberScrollState()
 
     ConstraintLayout(
@@ -123,7 +123,7 @@ fun ProfileScreen() {
                 }
                 .padding(top = 20.dp, end = 15.dp)
         )
-        Text(text = "Pavani Velma",
+        Text(text = "PavaniVelma100",
             fontSize = 20.sp,
             modifier = Modifier
                 .constrainAs(profileId) {
@@ -132,7 +132,7 @@ fun ProfileScreen() {
                 }
                 .padding(start = 10.dp, top = 10.dp))
 
-        Text(text = "Pavani Velma",
+        Text(text = "Joined August 2023",
             fontSize = 20.sp,
             modifier = Modifier
                 .constrainAs(personJoined) {

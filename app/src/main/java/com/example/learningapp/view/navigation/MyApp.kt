@@ -5,6 +5,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.learningapp.view.navigation.NavRoutes.CHAT_UI
+import com.example.learningapp.view.navigation.NavRoutes.DAY_STREAK_SCREEN
 import com.example.learningapp.view.navigation.NavRoutes.FRESH_START_SCREEN
 import com.example.learningapp.view.navigation.NavRoutes.FUN_SCREEN
 import com.example.learningapp.view.navigation.NavRoutes.GET_APP_SCREEN
@@ -19,14 +20,17 @@ import com.example.learningapp.view.navigation.NavRoutes.LANGUAGE_LIST
 import com.example.learningapp.view.navigation.NavRoutes.LEARNING_REASON_SCREEN
 import com.example.learningapp.view.navigation.NavRoutes.LETS_SCREEN
 import com.example.learningapp.view.navigation.NavRoutes.MOTIVATION_SCREEN
+import com.example.learningapp.view.navigation.NavRoutes.PROFILE_SCREEN
 import com.example.learningapp.view.navigation.NavRoutes.SIGN_IN_EMAIL_SCREEN
 import com.example.learningapp.view.navigation.NavRoutes.SIGN_IN_SCREEN
 import com.example.learningapp.view.navigation.NavRoutes.STREAK_SCREEN
 import com.example.learningapp.view.navigation.NavRoutes.TIME_CHOICE_SCREEN
 import com.example.learningapp.view.navigation.NavRoutes.TRANSLATE_SENTENCE_SCREEN
 import com.example.learningapp.view.navigation.NavRoutes.UNLOCKED_GIFT_SCREEN
+import com.example.learningapp.view.navigation.NavRoutes.WHAT_IS_STREAK_SCREEN
 import com.example.learningapp.view.screen.AchievementScreen
 import com.example.learningapp.view.screen.ChatScreen
+import com.example.learningapp.view.screen.DayStreakScreen
 import com.example.learningapp.view.screen.FreshStartScreen
 import com.example.learningapp.view.screen.FunScreen
 import com.example.learningapp.view.screen.GetAppScreen
@@ -40,12 +44,14 @@ import com.example.learningapp.view.screen.LanguagesList
 import com.example.learningapp.view.screen.LearningReason
 import com.example.learningapp.view.screen.LetsScreen
 import com.example.learningapp.view.screen.MotivationScreen
+import com.example.learningapp.view.screen.ProfileScreen
 import com.example.learningapp.view.screen.SignInEmailScreen
 import com.example.learningapp.view.screen.SignInScreen
 import com.example.learningapp.view.screen.StreakScreen
 import com.example.learningapp.view.screen.TimesList
 import com.example.learningapp.view.screen.TranslateSentenceBrother
 import com.example.learningapp.view.screen.UnlockedGiftScreen
+import com.example.learningapp.view.screen.WhatIsStreakScreen
 
 @Composable
 fun MyApp() {
@@ -77,5 +83,8 @@ fun MyApp() {
         composable(route = UNLOCKED_GIFT_SCREEN) { UnlockedGiftScreen(navController) }
         composable(route = GET_APP_SCREEN) { GetAppScreen(navController) }
         composable(route = CHAT_UI) {ChatScreen(navController)}
+        composable(route = PROFILE_SCREEN) {ProfileScreen(navController)}
+        composable(route = DAY_STREAK_SCREEN) {DayStreakScreen(navController=navController)}
+        composable(route = WHAT_IS_STREAK_SCREEN) {WhatIsStreakScreen(navController=navController)}
     }
 }
