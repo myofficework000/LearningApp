@@ -1,4 +1,4 @@
-package com.example.learningapp.view.screen.utils
+package com.example.learningapp.view.screen
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -50,7 +50,7 @@ fun WhatIsStreakScreen(count:Int = 5,navController: NavController){
 
             })
 
-        com.example.learningapp.view.screen.CardView(Modifier.constrainAs(cardView) {
+        CardView(Modifier.constrainAs(cardView) {
             top.linkTo(dayStreakText.bottom)
             start.linkTo(parent.start)
             end.linkTo(parent.end)
