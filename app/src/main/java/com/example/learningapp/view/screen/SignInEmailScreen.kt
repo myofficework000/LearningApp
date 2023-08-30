@@ -1,7 +1,5 @@
 package com.example.learningapp.view.screen
 
-import android.content.Context
-import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -43,6 +41,7 @@ import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.example.learningapp.R
+import com.example.learningapp.view.screen.utils.moveToDashBoardScreen
 import com.example.learningapp.view.screen.utils.showToast
 import com.example.learningapp.view.theme.GreyWhite
 import com.example.learningapp.viewmodel.SignInSignUpViewModel
@@ -64,6 +63,7 @@ fun SignInEmailScreen(navController: NavController) {
 
     loginStatus.value?.let {
         showToast(context, it)
+        moveToDashBoardScreen(context)
     }
 
     registrationStatus.value?.let {
@@ -76,6 +76,7 @@ fun SignInEmailScreen(navController: NavController) {
 
     savedToFireStore.value?.let {
         showToast(context, it)
+        moveToDashBoardScreen(context)
     }
 
     ConstraintLayout(

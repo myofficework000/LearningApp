@@ -36,6 +36,7 @@ import androidx.constraintlayout.compose.Dimension
 import androidx.navigation.NavController
 import com.example.learningapp.R
 import com.example.learningapp.view.navigation.NavRoutes.SIGN_IN_EMAIL_SCREEN
+import com.example.learningapp.view.screen.utils.moveToDashBoardScreen
 import com.example.learningapp.view.screen.utils.showToast
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.FirebaseAuth
@@ -60,6 +61,7 @@ fun SignInScreen(navController: NavController) {
     val launcher = rememberFirebaseAuthLauncher(
         onAuthComplete = { result ->
             user = result.user
+            moveToDashBoardScreen(context)
         },
         onAuthError = {
             user = null
@@ -265,6 +267,7 @@ fun verifyOtp(context: Context, verificationCode: String) {
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     showToast(context, "Success login")
+                    moveToDashBoardScreen(context)
                 } else {
                     showToast(context, "Failed login")
                 }

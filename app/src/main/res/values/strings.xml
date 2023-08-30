@@ -82,4 +82,7 @@
     <string name="select_streak">Select Streak Goal</string>
     <string name="commit_goal">Commit To My Goal</string>
     <string name="complete_sentence">Complete a few missing steps to have a great life</string>
+    <string name="unit_1">Unit 1</string>
+    <string name="form_basic_sentences">Form basic sentences, greet people</string>
+    <string name="start">START</string>
 </resources>
