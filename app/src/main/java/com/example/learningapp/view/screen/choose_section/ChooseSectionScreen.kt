@@ -83,14 +83,22 @@ fun ChooseSectionScreen(navController: NavController){
 
 }
 fun getListOfSection() = listOf(
-    Section("test",
-        0,
+    Section("Section 1",
+        "Start with essential phrases and simple grammar concepts",
+        1,
         5,
-        R.drawable.ic_facebook,
+        R.drawable.owl_study,
         true),
-    Section("test",
+    Section("Section 2",
+        "Learn words phrases and grammar concepts for basic interactions",
         0,
         5,
-        R.drawable.ic_facebook,
+        R.drawable.mountain_bike,
+        false),
+    Section("Section 10",
+        "Learn words phrases and grammar concepts for basic interactions",
+        0,
+        10,
+        R.drawable.owl_1,
         false),
 )
