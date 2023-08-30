@@ -19,6 +19,7 @@ val Orange50 = Color(0x59FA8231)
 val GreyButton = Color(0xFFE5E5E4)
 val GreyButtonText = Color(0xFF8B8B8B)
 val purple = Color(0xFFD96FF1)
+val BlueCard = Color(0xFF1baef2)
 
 val Purple40 = Color(0xFF6650a4)
 val PurpleGrey40 = Color(0xFF625b71)
@@ -47,6 +48,7 @@ val holoGreen = Color(0xFF9ff39f)
 // Theme: Green
 val darkGreen = Color(0xFF084E08)
 val lightGreen = Color(0xFF219921)
+val DarkGreen1 = Color(0xFF129B8D)
 
 // Theme: Red
 val darkRed = Color(0xFF631207)
@@ -58,3 +60,9 @@ val Btn_EquipFreezeStreak = Color(0xB9007BFF)
 val GetApp_Background = Color(0xB9007BFF)
 val GetApp_Btn_Text = Color(0xB9007BFF)
 val ColorBlue = Color(0xFF03A8F8)
+val QuestAndBadge_TabBackGround = Color(0xFF6650a4)
+
+// Quest and Badge
+val TimeLeft_txt = Color(0xFFfa8231)
+val LightBlue1 = Color(0xFFB7D0DB)
+val ColorYellow = Color(0xFFFFBF27)
