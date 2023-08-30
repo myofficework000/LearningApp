@@ -47,6 +47,7 @@ val holoGreen = Color(0xFF9ff39f)
 // Theme: Green
 val darkGreen = Color(0xFF084E08)
 val lightGreen = Color(0xFF219921)
+val DarkGreen1 = Color(0xFF129B8D)
 
 // Theme: Red
 val darkRed = Color(0xFF631207)

@@ -453,7 +453,8 @@ fun Achievements(modifier: Modifier){
                         top.linkTo(parent.top)
                         start.linkTo(image.end)
                         end.linkTo(parent.end)
-                    }.padding(top = 15.dp))
+                    }
+                    .padding(top = 15.dp))
 
 
             Button(
@@ -476,8 +477,8 @@ fun Achievements(modifier: Modifier){
             }
 
             Divider(thickness = 2.dp,
-                color = Color.LightGray,
-                modifier = Modifier
+                color = Color.Black,
+                modifier = Modifier.width(100.dp)
                     .height(1.dp)
                     .fillMaxWidth()
                     .constrainAs(dividerOne) {
@@ -513,7 +514,8 @@ fun Achievements(modifier: Modifier){
                         top.linkTo(dividerOne.bottom)
                         start.linkTo(imag1.end)
 
-                    }.padding(start =10.dp, top = 20.dp))
+                    }
+                    .padding(start = 10.dp, top = 20.dp))
 
             Text(text ="Reach a 3 day streak" ,
                 style = MaterialTheme.typography.bodyLarge,
@@ -523,19 +525,20 @@ fun Achievements(modifier: Modifier){
                     .constrainAs(threeDayStreak) {
                         top.linkTo(wildFireText.bottom)
                         start.linkTo(imag1.end)
-                    }.padding(start =10.dp))
+                    }
+                    .padding(start = 10.dp))
 
             LinearProgressIndicator(progress =0.1f,
                 color = ColorYellow,
                 modifier = Modifier
-                .fillMaxWidth()
-                .constrainAs(progressBar) {
-                    top.linkTo(threeDayStreak.bottom)
-                    start.linkTo(imag1.end)
-                    end.linkTo(parent.end)
-                    width = Dimension.fillToConstraints
+                    .fillMaxWidth()
+                    .constrainAs(progressBar) {
+                        top.linkTo(threeDayStreak.bottom)
+                        start.linkTo(imag1.end)
+                        end.linkTo(parent.end)
+                        width = Dimension.fillToConstraints
 
-                })
+                    })
 
 
             Divider(thickness = 2.dp,
@@ -573,7 +576,8 @@ fun Achievements(modifier: Modifier){
                         top.linkTo(imageThree.top)
                         start.linkTo(imageThree.end)
 
-                    }.padding(top = 20.dp))
+                    }
+                    .padding(top = 20.dp))
 
             Text(text ="Earn 100 XP" ,
                 style = MaterialTheme.typography.bodyLarge,
@@ -589,13 +593,13 @@ fun Achievements(modifier: Modifier){
 
                 color = ColorYellow,
                 modifier = Modifier
-                .fillMaxWidth()
-                .constrainAs(progressBarTwo) {
-                    start.linkTo(imageThree.end)
-                    end.linkTo(parent.end)
-                    top.linkTo(earn100.bottom)
-                    width = Dimension.fillToConstraints
-                }
+                    .fillMaxWidth()
+                    .constrainAs(progressBarTwo) {
+                        start.linkTo(imageThree.end)
+                        end.linkTo(parent.end)
+                        top.linkTo(earn100.bottom)
+                        width = Dimension.fillToConstraints
+                    }
             )
             Divider(thickness = 2.dp,
                 color = Color.LightGray,
