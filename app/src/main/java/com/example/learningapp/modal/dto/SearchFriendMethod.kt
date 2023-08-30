@@ -1,3 +1,9 @@
 package com.example.learningapp.modal.dto
 
-data class SearchFriendMethod()
+import androidx.annotation.DrawableRes
+
+data class SearchFriendMethod(
+    val title:String,
+    val description:String,
+    @DrawableRes val image:Int
+)
