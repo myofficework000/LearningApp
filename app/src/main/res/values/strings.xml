@@ -78,14 +78,12 @@
     <string name="unstoppable">Unstoppable</string>
     <string name="complete125x">You\'ll be 125x more likely to complete the course!</string>
     <string name="commit_to_learn">Commit to learning Spanish!</string>
-    <string name="what_is_streak_goal">Streak goals help you stay commited!</string>
+    <string name="what_is_streak_goal">Streak goals help you stay committed!</string>
     <string name="select_streak">Select Streak Goal</string>
     <string name="commit_goal">Commit To My Goal</string>
     <string name="complete_sentence">Complete a few missing steps to have a great life</string>
-
     <string name="daily_quests_title">Daily Quests</string>
     <string name="earn_rewards_with_quests_title">Earn rewards with quests!</string>
-
     <string name="unit_1">Unit 1</string>
     <string name="form_basic_sentences">Form basic sentences, greet people</string>
     <string name="start">START</string>
@@ -113,5 +111,10 @@
     <string name="you_leveled_up">You leveled up the \nPhotogenic achievement!</string>
     <string name="don_t_spend">Don\'t spend them all in one place.</string>
     <string name="you_earned_25_gems">You earned 25 gems!</string>
-
+    <string name="create_avatar">Create Avatar</string>
+    <string name="done">DONE</string>
+    <string name="skin_tone">Skin tone</string>
+    <string name="expression">Expression</string>
+    <string name="headwear">Headwear</string>
+    <string name="headwear_color">Headwear color</string>
 </resources>
