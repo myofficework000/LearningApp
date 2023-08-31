@@ -88,7 +88,12 @@ dependencies {
     // For Observing the state of Livedata in Compose
     implementation("androidx.compose.runtime:runtime-livedata:1.5.0")
 
+    implementation("androidx.compose.material3:material3:1.1.1")
+    implementation("androidx.compose.material3:material3-window-size-class:1.1.1")
+
+
     //For More material Icons
     implementation("androidx.compose.material:material-icons-extended:1.5.0")
+
 
 }
