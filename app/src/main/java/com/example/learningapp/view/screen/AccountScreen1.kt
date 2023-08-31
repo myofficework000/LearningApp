@@ -301,7 +301,7 @@ fun General(modifier: Modifier= Modifier){
 
             Column {
                 Row(
-                    modifier = Modifier.fillMaxWidth(),
+                    modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp),
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
                     Text(
@@ -323,7 +323,7 @@ fun General(modifier: Modifier= Modifier){
                         .fillMaxWidth()
                         .width(2.dp)
                 )
-                Row( modifier = Modifier.fillMaxWidth(),
+                Row( modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp),
                     horizontalArrangement = Arrangement.SpaceBetween) {
 
                     Text(
@@ -347,7 +347,7 @@ fun General(modifier: Modifier= Modifier){
                 )
 
                 Row(
-                    modifier = Modifier.fillMaxWidth(),
+                    modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp),
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
                     Text(
@@ -371,7 +371,7 @@ fun General(modifier: Modifier= Modifier){
                 )
 
                 Row(
-                    modifier = Modifier.fillMaxWidth(),
+                    modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp),
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
                     Text(
@@ -446,7 +446,7 @@ fun Accessibility(modifier: Modifier){
     ) {
 
         Column {
-            Row(  modifier = Modifier.fillMaxWidth(),
+            Row(  modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp),
                 horizontalArrangement = Arrangement.SpaceBetween) {
                 Text(
                     text = "Speaking Exercises",
@@ -467,7 +467,7 @@ fun Accessibility(modifier: Modifier){
                     .fillMaxWidth()
                     .width(2.dp)
             )
-            Row(  modifier = Modifier.fillMaxWidth(),
+            Row(  modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp),
                 horizontalArrangement = Arrangement.SpaceBetween) {
                 Text(
                     text = "Learning Exercises",
@@ -489,7 +489,7 @@ fun Accessibility(modifier: Modifier){
                     .width(2.dp)
             )
 
-            Row(  modifier = Modifier.fillMaxWidth(),
+            Row(  modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp),
                 horizontalArrangement = Arrangement.SpaceBetween) {
                 Text(
                     text = "Animations ",
@@ -511,7 +511,7 @@ fun Accessibility(modifier: Modifier){
                     .width(2.dp)
             )
 
-            Row (  modifier = Modifier.fillMaxWidth(),
+            Row (  modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp),
                 horizontalArrangement = Arrangement.SpaceBetween){
                 Text(
                     text = "Haptic Feedback ",
@@ -551,7 +551,7 @@ fun Connected(modifier: Modifier) {
     ) {
 
         Column {
-            Row (  modifier = Modifier.fillMaxWidth(),
+            Row (  modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp),
                 horizontalArrangement = Arrangement.SpaceBetween) {
 
                 Image(modifier = Modifier
@@ -597,7 +597,7 @@ fun Notifications(modifier: Modifier){
     ) {
 
         Column {
-            Row (  modifier = Modifier.fillMaxWidth(),
+            Row (  modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp),
                 horizontalArrangement = Arrangement.SpaceBetween) {
                 Text(
                     text = "SMS Remainder",
@@ -628,7 +628,7 @@ fun Notifications(modifier: Modifier){
     ) {
 
         Column {
-            Row (  modifier = Modifier.fillMaxWidth(),
+            Row (  modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp),
                 horizontalArrangement = Arrangement.SpaceBetween) {
                 Text(
                     text = "Practice remainder",
@@ -654,7 +654,7 @@ fun Notifications(modifier: Modifier){
                     .fillMaxWidth()
                     .width(2.dp)
             )
-            Row  (  modifier = Modifier.fillMaxWidth(),
+            Row  (  modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp),
                 horizontalArrangement = Arrangement.SpaceBetween){
                 Text(
                     text = "Smart Scheduling",
@@ -676,7 +676,7 @@ fun Notifications(modifier: Modifier){
                     .width(2.dp)
             )
 
-            Row  (  modifier = Modifier.fillMaxWidth(),
+            Row  (  modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp),
                 horizontalArrangement = Arrangement.SpaceBetween){
                 Text(
                     text = "Remainder Time ",
@@ -714,7 +714,7 @@ fun Notifications(modifier: Modifier){
     ) {
 
         Column {
-            Row  (  modifier = Modifier.fillMaxWidth(),
+            Row  (  modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp),
                 horizontalArrangement = Arrangement.SpaceBetween){
                 Text(
                     text = "Weekly Progress",
@@ -737,7 +737,7 @@ fun Notifications(modifier: Modifier){
             )
 
 
-            Row  (  modifier = Modifier.fillMaxWidth(),
+            Row  (  modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp),
                 horizontalArrangement = Arrangement.SpaceBetween){
                 Text(
                     text = "New Follower",
@@ -763,7 +763,7 @@ fun Notifications(modifier: Modifier){
                     .width(2.dp)
             )
 
-            Row (  modifier = Modifier.fillMaxWidth(),
+            Row (  modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp),
                 horizontalArrangement = Arrangement.SpaceBetween) {
                 Text(
                     text = "Friend Activity",
@@ -789,7 +789,7 @@ fun Notifications(modifier: Modifier){
                     .width(2.dp)
             )
 
-            Row  (  modifier = Modifier.fillMaxWidth(),
+            Row  (  modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp),
                 horizontalArrangement = Arrangement.SpaceBetween){
                 Text(
                     text = "Leaderboards ",
@@ -811,7 +811,7 @@ fun Notifications(modifier: Modifier){
                     .width(2.dp)
             )
 
-            Row (  modifier = Modifier.fillMaxWidth(),
+            Row (  modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp),
                 horizontalArrangement = Arrangement.SpaceBetween) {
                 Text(
                     text = "Product updates + learning tips",
@@ -837,7 +837,7 @@ fun Notifications(modifier: Modifier){
                     .width(2.dp)
             )
 
-            Row (  modifier = Modifier.fillMaxWidth(),
+            Row (  modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp),
                 horizontalArrangement = Arrangement.SpaceBetween) {
                 Text(
                     text = "news + Promotions",
@@ -863,7 +863,7 @@ fun Notifications(modifier: Modifier){
                     .width(2.dp)
             )
 
-            Row  (  modifier = Modifier.fillMaxWidth(),
+            Row  (  modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp),
                 horizontalArrangement = Arrangement.SpaceBetween){
                 Text(
                     text = "Streak Freeze used",
@@ -889,7 +889,7 @@ fun Notifications(modifier: Modifier){
                     .width(2.dp)
             )
 
-            Row  (  modifier = Modifier.fillMaxWidth(),
+            Row  (  modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp),
                 horizontalArrangement = Arrangement.SpaceBetween){
                 Text(
                     text = "Streak Saver",
@@ -910,7 +910,7 @@ fun Notifications(modifier: Modifier){
                     .width(2.dp)
             )
 
-            Row  (  modifier = Modifier.fillMaxWidth(),
+            Row  (  modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp),
                 horizontalArrangement = Arrangement.SpaceBetween){
                 Text(
                     text = "Research Invitations",
@@ -937,8 +937,9 @@ fun Notifications(modifier: Modifier){
     }
 }
 
+@Preview(showBackground = true)
 @Composable
-fun Privacy(modifier: Modifier){
+fun Privacy(modifier: Modifier = Modifier){
     val checked = remember { mutableStateOf(true) }
 
     Column() {
@@ -956,17 +957,19 @@ fun Privacy(modifier: Modifier){
         ) {
 
             Column {
-                Row  (  modifier = Modifier.fillMaxWidth(),
+                Row  (  modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp),
                     horizontalArrangement = Arrangement.SpaceBetween){
                     Text(
                         text = "Tracking and Personalization for advertising",
                         fontSize = 20.sp,
                         modifier = Modifier
-                            .padding(10.dp)
+                            .padding(start=10.dp)
+                            .weight(0.8f),
                     )
 
                     Switch(
-                        modifier = Modifier,
+                        modifier = Modifier
+                            .weight(0.2f),
                         checked = checked.value,
                         onCheckedChange = { checked.value = it },
                     )
