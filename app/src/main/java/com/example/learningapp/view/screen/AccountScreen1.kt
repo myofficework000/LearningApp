@@ -2,19 +2,25 @@ package com.example.learningapp.view.screen
 
 
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Divider
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.OutlinedButton
@@ -32,12 +38,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
+import com.example.learningapp.R
 import com.example.learningapp.view.theme.ColorBlue
 import com.example.learningapp.view.theme.darkGreen
 
@@ -45,11 +53,13 @@ import com.example.learningapp.view.theme.darkGreen
 @Preview(showBackground = true)
 @Composable
 fun AccountScreen(){
+    val state = rememberScrollState()
+    ConstraintLayout(modifier = Modifier
+        .fillMaxSize()
+        .verticalScroll(state)) {
+        val (Boxprofile, name) = createRefs()
 
-    ConstraintLayout(modifier = Modifier.fillMaxSize()) {
-        val (Boxprofile, name, Etname) = createRefs()
-
-        val guidLine = createGuidelineFromTop(0.2f)
+        val guidLine = createGuidelineFromTop(0.1f)
         var Name by remember { mutableStateOf("") }
         var UserName by remember { mutableStateOf("") }
         var email by remember { mutableStateOf("") }
@@ -117,6 +127,7 @@ fun AccountScreen(){
                 onValueChange = { Name = it },
                 label = { Text("Enter name") },
                 modifier = Modifier
+                    .fillMaxWidth()
                     .padding(10.dp)
                     .border(2.dp, Color.LightGray, RoundedCornerShape(6.dp)),
                 maxLines = 1,
@@ -138,6 +149,7 @@ fun AccountScreen(){
                 onValueChange = { UserName = it },
                 label = { Text("Enter User name") },
                 modifier = Modifier
+                    .fillMaxWidth()
                     .padding(10.dp)
                     .border(2.dp, Color.LightGray, RoundedCornerShape(6.dp)),
                 maxLines = 1,
@@ -159,6 +171,7 @@ fun AccountScreen(){
                 onValueChange = { email = it },
                 label = { Text("Enter your email") },
                 modifier = Modifier
+                    .fillMaxWidth()
                     .padding(10.dp)
                     .border(2.dp, Color.LightGray, RoundedCornerShape(6.dp)),
                 maxLines = 1,
@@ -180,6 +193,7 @@ fun AccountScreen(){
                 onValueChange = { password = it },
                 label = { Text("Enter password ") },
                 modifier = Modifier
+                    .fillMaxWidth()
                     .padding(10.dp)
                     .border(2.dp, Color.LightGray, RoundedCornerShape(6.dp)),
                 maxLines = 1,
@@ -224,60 +238,102 @@ fun AccountScreen(){
                     .padding(10.dp)
             )
 
+            Accessibility(Modifier.fillMaxWidth())
+
+            Text(
+                text = "Connected",
+                color = Color.Gray,
+                fontWeight = FontWeight.Bold,
+                fontSize = 20.sp,
+                modifier = Modifier
+                    .padding(10.dp)
+            )
+            Connected(Modifier.fillMaxWidth())
+
+
+            Text(
+                text = "Notifications",
+                color = Color.Gray,
+                fontWeight = FontWeight.Bold,
+                fontSize = 20.sp,
+                modifier = Modifier
+                    .padding(10.dp)
+            )
+            Notifications(Modifier.fillMaxWidth())
+
+            Text(
+                text = "Privacy",
+                color = Color.Gray,
+                fontWeight = FontWeight.Bold,
+                fontSize = 20.sp,
+                modifier = Modifier
+                    .padding(10.dp)
+            )
+
+            Privacy(Modifier.fillMaxWidth())
+
+
         }
     }
 
 }
 
-
+@Preview(showBackground = true)
 @Composable
-fun General(modifier: Modifier){
+fun General(modifier: Modifier= Modifier){
     val checked = remember { mutableStateOf(true) }
+    val checked1 = remember { mutableStateOf(true) }
+    val checked2 = remember { mutableStateOf(true) }
 
     Column {
         Card(
+
+            border = BorderStroke(1.dp, Color.LightGray),
+            colors = CardDefaults.cardColors(
+                containerColor = Color.White
+            ),
+            shape = RoundedCornerShape(16.dp),
             modifier = modifier
                 .fillMaxWidth()
                 .wrapContentHeight()
+                .padding(16.dp)
         ) {
 
             Column {
-                Row {
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
                     Text(
                         text = "Sound Effects",
-                        color = Color.Gray,
-                        fontWeight = FontWeight.Bold,
                         fontSize = 20.sp,
                         modifier = Modifier
                             .padding(10.dp)
                     )
 
                     Switch(
-                        modifier = Modifier,
+//                        modifier = Modifier.align(alignment = Alignment.End),
                         checked = checked.value,
                         onCheckedChange = { checked.value = it },
                     )
 
                 }
                 Divider(
-                    color = Color.Blue, modifier = Modifier
+                    color =Color.LightGray, modifier = Modifier
                         .fillMaxWidth()
                         .width(2.dp)
                 )
-                Row {
+                Row( modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween) {
+
                     Text(
                         text = "DARK MODE",
-                        color = Color.Gray,
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 20.sp,
                         modifier = Modifier
                             .padding(10.dp)
                     )
 
                     Text(
                         text = "System Default",
-                        color = Color.Gray,
-                        fontWeight = FontWeight.Bold,
                         fontSize = 20.sp,
                         modifier = Modifier
                             .padding(10.dp)
@@ -285,16 +341,17 @@ fun General(modifier: Modifier){
 
                 }
                 Divider(
-                    color = Color.Blue, modifier = Modifier
+                    color = Color.LightGray, modifier = Modifier
                         .fillMaxWidth()
                         .width(2.dp)
                 )
 
-                Row {
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
                     Text(
                         text = "Friends Quest",
-                        color = Color.Gray,
-                        fontWeight = FontWeight.Bold,
                         fontSize = 20.sp,
                         modifier = Modifier
                             .padding(10.dp)
@@ -302,22 +359,23 @@ fun General(modifier: Modifier){
 
                     Switch(
                         modifier = Modifier,
-                        checked = checked.value,
-                        onCheckedChange = { checked.value = it },
+                        checked = checked1.value,
+                        onCheckedChange = { checked1.value = it },
                     )
 
                 }
                 Divider(
-                    color = Color.Blue, modifier = Modifier
+                    color = Color.LightGray, modifier = Modifier
                         .fillMaxWidth()
                         .width(2.dp)
                 )
 
-                Row {
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
                     Text(
                         text = "Motivational messages",
-                        color = Color.Gray,
-                        fontWeight = FontWeight.Bold,
                         fontSize = 20.sp,
                         modifier = Modifier
                             .padding(10.dp)
@@ -325,8 +383,8 @@ fun General(modifier: Modifier){
 
                     Switch(
                         modifier = Modifier,
-                        checked = checked.value,
-                        onCheckedChange = { checked.value = it },
+                        checked = checked2.value,
+                        onCheckedChange = { checked2.value = it },
                     )
 
                 }
@@ -366,4 +424,584 @@ fun General(modifier: Modifier){
 
     }
 
+}
+
+@Composable
+fun Accessibility(modifier: Modifier){
+
+    val checked = remember { mutableStateOf(true) }
+    val checked1 = remember { mutableStateOf(true) }
+    val checked2 = remember { mutableStateOf(true) }
+    val checked3 = remember { mutableStateOf(true) }
+    Card(
+        border = BorderStroke(1.dp, Color.LightGray),
+        colors = CardDefaults.cardColors(
+            containerColor = Color.White
+        ),
+        shape = RoundedCornerShape(16.dp),
+        modifier = modifier
+            .fillMaxWidth()
+            .wrapContentHeight()
+            .padding(16.dp)
+    ) {
+
+        Column {
+            Row(  modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween) {
+                Text(
+                    text = "Speaking Exercises",
+                    fontSize = 20.sp,
+                    modifier = Modifier
+                        .padding(10.dp)
+                )
+
+                Switch(
+                    modifier = Modifier,
+                    checked = checked.value,
+                    onCheckedChange = { checked.value = it },
+                )
+
+            }
+            Divider(
+                color = Color.LightGray, modifier = Modifier
+                    .fillMaxWidth()
+                    .width(2.dp)
+            )
+            Row(  modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween) {
+                Text(
+                    text = "Learning Exercises",
+                    fontSize = 20.sp,
+                    modifier = Modifier
+                        .padding(10.dp)
+                )
+
+                Switch(
+                    modifier = Modifier,
+                    checked = checked1.value,
+                    onCheckedChange = { checked1.value = it },
+                )
+
+            }
+            Divider(
+                color = Color.LightGray, modifier = Modifier
+                    .fillMaxWidth()
+                    .width(2.dp)
+            )
+
+            Row(  modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween) {
+                Text(
+                    text = "Animations ",
+                    fontSize = 20.sp,
+                    modifier = Modifier
+                        .padding(10.dp)
+                )
+
+                Switch(
+                    modifier = Modifier,
+                    checked = checked2.value,
+                    onCheckedChange = { checked2.value = it },
+                )
+
+            }
+            Divider(
+                color = Color.LightGray, modifier = Modifier
+                    .fillMaxWidth()
+                    .width(2.dp)
+            )
+
+            Row (  modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween){
+                Text(
+                    text = "Haptic Feedback ",
+                    fontSize = 20.sp,
+                    modifier = Modifier
+                        .padding(10.dp)
+                )
+
+                Switch(
+                    modifier = Modifier,
+                    checked = checked3.value,
+                    onCheckedChange = { checked3.value = it },
+                )
+
+            }
+
+
+        }
+
+    }
+}
+
+@Composable
+fun Connected(modifier: Modifier) {
+    val checked = remember { mutableStateOf(true) }
+
+    Card(
+        border = BorderStroke(1.dp, Color.LightGray),
+        colors = CardDefaults.cardColors(
+            containerColor = Color.White
+        ),
+        shape = RoundedCornerShape(16.dp),
+        modifier = modifier
+            .fillMaxWidth()
+            .wrapContentHeight()
+            .padding(16.dp)
+    ) {
+
+        Column {
+            Row (  modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween) {
+
+                Image(modifier = Modifier
+                    .width(50.dp)
+                    .height(50.dp),
+                    painter = painterResource(id = R.drawable.contacts), contentDescription = "Image")
+                Text(
+                    text = "Speaking Exercises",
+                    color = Color.Gray,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 20.sp,
+                    modifier = Modifier
+                        .padding(10.dp)
+                )
+
+                Switch(
+                    modifier = Modifier,
+                    checked = checked.value,
+                    onCheckedChange = { checked.value = it },
+                )
+
+            }
+
+        }
+    }
+}
+
+@Composable
+fun Notifications(modifier: Modifier){
+    val checked = remember { mutableStateOf(true) }
+    val checked1 = remember { mutableStateOf(true) }
+
+    Card(
+        border = BorderStroke(1.dp, Color.LightGray),
+        colors = CardDefaults.cardColors(
+            containerColor = Color.White
+        ),
+        shape = RoundedCornerShape(16.dp),
+        modifier = modifier
+            .fillMaxWidth()
+            .wrapContentHeight()
+            .padding(16.dp)
+    ) {
+
+        Column {
+            Row (  modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween) {
+                Text(
+                    text = "SMS Remainder",
+                    fontSize = 20.sp,
+                    modifier = Modifier
+                        .padding(10.dp)
+                )
+
+                Switch(
+                    modifier = Modifier,
+                    checked = checked.value,
+                    onCheckedChange = { checked.value = it },
+                )
+            }
+
+        }
+    }
+    Card(
+        border = BorderStroke(1.dp, Color.LightGray),
+        colors = CardDefaults.cardColors(
+            containerColor = Color.White
+        ),
+        shape = RoundedCornerShape(16.dp),
+        modifier = Modifier
+            .fillMaxWidth()
+            .wrapContentHeight()
+            .padding(16.dp)
+    ) {
+
+        Column {
+            Row (  modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween) {
+                Text(
+                    text = "Practice remainder",
+                    fontSize = 20.sp,
+                    modifier = Modifier
+                        .padding(10.dp)
+                )
+
+
+                Image(modifier = Modifier
+                    .width(50.dp)
+                    .height(50.dp),
+                    painter = painterResource(id = R.drawable.baseline_phone_android_24), contentDescription = "Image")
+
+                Image(modifier = Modifier
+                    .width(50.dp)
+                    .height(50.dp),
+                    painter = painterResource(id = R.drawable.baseline_mail_24), contentDescription = "Image")
+
+            }
+            Divider(
+                color = Color.LightGray, modifier = Modifier
+                    .fillMaxWidth()
+                    .width(2.dp)
+            )
+            Row  (  modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween){
+                Text(
+                    text = "Smart Scheduling",
+                    fontSize = 20.sp,
+                    modifier = Modifier
+                        .padding(10.dp)
+                )
+
+                Switch(
+                    modifier = Modifier,
+                    checked = checked1.value,
+                    onCheckedChange = { checked1.value = it },
+                )
+
+            }
+            Divider(
+                color = Color.LightGray, modifier = Modifier
+                    .fillMaxWidth()
+                    .width(2.dp)
+            )
+
+            Row  (  modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween){
+                Text(
+                    text = "Remainder Time ",
+                    fontSize = 20.sp,
+                    modifier = Modifier
+                        .padding(10.dp)
+                )
+
+                Text(
+                    text = "0:00 ",
+                    fontSize = 20.sp,
+                    modifier = Modifier
+                        .padding(10.dp)
+                )
+
+            }
+            Divider(
+                color = Color.LightGray, modifier = Modifier
+                    .fillMaxWidth()
+                    .width(2.dp)
+            )
+        }
+    }
+
+    Card(
+        border = BorderStroke(1.dp, Color.LightGray),
+        colors = CardDefaults.cardColors(
+            containerColor = Color.White
+        ),
+        shape = RoundedCornerShape(16.dp),
+        modifier = modifier
+            .fillMaxWidth()
+            .wrapContentHeight()
+            .padding(16.dp)
+    ) {
+
+        Column {
+            Row  (  modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween){
+                Text(
+                    text = "Weekly Progress",
+
+                    fontSize = 20.sp,
+                    modifier = Modifier
+                        .padding(10.dp)
+                )
+
+                Image(modifier = Modifier
+                    .width(50.dp)
+                    .height(50.dp),
+                    painter = painterResource(id = R.drawable.baseline_mail_24), contentDescription = "Image")
+
+            }
+            Divider(
+                color = Color.LightGray, modifier = Modifier
+                    .fillMaxWidth()
+                    .width(2.dp)
+            )
+
+
+            Row  (  modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween){
+                Text(
+                    text = "New Follower",
+                    fontSize = 20.sp,
+                    modifier = Modifier
+                        .padding(10.dp)
+                )
+
+                Image(modifier = Modifier
+                    .width(50.dp)
+                    .height(50.dp),
+                    painter = painterResource(id = R.drawable.baseline_phone_android_24), contentDescription = "Image")
+
+                Image(modifier = Modifier
+                    .width(50.dp)
+                    .height(50.dp),
+                    painter = painterResource(id = R.drawable.baseline_mail_24), contentDescription = "Image")
+
+            }
+            Divider(
+                color = Color.LightGray, modifier = Modifier
+                    .fillMaxWidth()
+                    .width(2.dp)
+            )
+
+            Row (  modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween) {
+                Text(
+                    text = "Friend Activity",
+                    fontSize = 20.sp,
+                    modifier = Modifier
+                        .padding(10.dp)
+                )
+
+                Image(modifier = Modifier
+                    .width(50.dp)
+                    .height(50.dp),
+                    painter = painterResource(id = R.drawable.baseline_phone_android_24), contentDescription = "Image")
+
+                Image(modifier = Modifier
+                    .width(50.dp)
+                    .height(50.dp),
+                    painter = painterResource(id = R.drawable.baseline_mail_24), contentDescription = "Image")
+
+            }
+            Divider(
+                color = Color.LightGray, modifier = Modifier
+                    .fillMaxWidth()
+                    .width(2.dp)
+            )
+
+            Row  (  modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween){
+                Text(
+                    text = "Leaderboards ",
+                    fontSize = 20.sp,
+                    modifier = Modifier
+                        .padding(10.dp)
+                )
+
+                Image(modifier = Modifier
+                    .width(50.dp)
+                    .height(50.dp),
+                    painter = painterResource(id = R.drawable.baseline_phone_android_24), contentDescription = "Image")
+
+
+            }
+            Divider(
+                color = Color.LightGray, modifier = Modifier
+                    .fillMaxWidth()
+                    .width(2.dp)
+            )
+
+            Row (  modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween) {
+                Text(
+                    text = "Product updates + learning tips",
+                    fontSize = 20.sp,
+                    modifier = Modifier
+                        .padding(10.dp)
+                )
+
+                Image(modifier = Modifier
+                    .width(50.dp)
+                    .height(50.dp),
+                    painter = painterResource(id = R.drawable.baseline_phone_android_24), contentDescription = "Image")
+
+                Image(modifier = Modifier
+                    .width(50.dp)
+                    .height(50.dp),
+                    painter = painterResource(id = R.drawable.baseline_mail_24), contentDescription = "Image")
+
+            }
+            Divider(
+                color = Color.LightGray, modifier = Modifier
+                    .fillMaxWidth()
+                    .width(2.dp)
+            )
+
+            Row (  modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween) {
+                Text(
+                    text = "news + Promotions",
+                    fontSize = 20.sp,
+                    modifier = Modifier
+                        .padding(10.dp)
+                )
+
+                Image(modifier = Modifier
+                    .width(50.dp)
+                    .height(50.dp),
+                    painter = painterResource(id = R.drawable.baseline_phone_android_24), contentDescription = "Image")
+
+                Image(modifier = Modifier
+                    .width(50.dp)
+                    .height(50.dp),
+                    painter = painterResource(id = R.drawable.baseline_mail_24), contentDescription = "Image")
+
+            }
+            Divider(
+                color = Color.LightGray, modifier = Modifier
+                    .fillMaxWidth()
+                    .width(2.dp)
+            )
+
+            Row  (  modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween){
+                Text(
+                    text = "Streak Freeze used",
+                    fontSize = 20.sp,
+                    modifier = Modifier
+                        .padding(10.dp)
+                )
+
+                Image(modifier = Modifier
+                    .width(50.dp)
+                    .height(50.dp),
+                    painter = painterResource(id = R.drawable.baseline_phone_android_24), contentDescription = "Image")
+
+                Image(modifier = Modifier
+                    .width(50.dp)
+                    .height(50.dp),
+                    painter = painterResource(id = R.drawable.baseline_mail_24), contentDescription = "Image")
+
+            }
+            Divider(
+                color = Color.LightGray, modifier = Modifier
+                    .fillMaxWidth()
+                    .width(2.dp)
+            )
+
+            Row  (  modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween){
+                Text(
+                    text = "Streak Saver",
+                    fontSize = 20.sp,
+                    modifier = Modifier
+                        .padding(10.dp)
+                )
+
+                Image(modifier = Modifier
+                    .width(50.dp)
+                    .height(50.dp),
+                    painter = painterResource(id = R.drawable.baseline_phone_android_24), contentDescription = "Image")
+
+            }
+            Divider(
+                color = Color.LightGray, modifier = Modifier
+                    .fillMaxWidth()
+                    .width(2.dp)
+            )
+
+            Row  (  modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween){
+                Text(
+                    text = "Research Invitations",
+                    fontSize = 20.sp,
+                    modifier = Modifier
+                        .padding(10.dp)
+                )
+
+                Image(modifier = Modifier
+                    .width(50.dp)
+                    .height(50.dp),
+                    painter = painterResource(id = R.drawable.baseline_mail_24), contentDescription = "Image")
+
+            }
+            Divider(
+                color = Color.LightGray, modifier = Modifier
+                    .fillMaxWidth()
+                    .width(2.dp)
+            )
+
+        }
+
+
+    }
+}
+
+@Composable
+fun Privacy(modifier: Modifier){
+    val checked = remember { mutableStateOf(true) }
+
+    Column() {
+
+        Card(
+            border = BorderStroke(1.dp, Color.LightGray),
+            colors = CardDefaults.cardColors(
+                containerColor = Color.White
+            ),
+            shape = RoundedCornerShape(16.dp),
+            modifier = modifier
+                .fillMaxWidth()
+                .wrapContentHeight()
+                .padding(16.dp)
+        ) {
+
+            Column {
+                Row  (  modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween){
+                    Text(
+                        text = "Tracking and Personalization for advertising",
+                        fontSize = 20.sp,
+                        modifier = Modifier
+                            .padding(10.dp)
+                    )
+
+                    Switch(
+                        modifier = Modifier,
+                        checked = checked.value,
+                        onCheckedChange = { checked.value = it },
+                    )
+
+                }
+
+
+
+            }
+        }
+
+        OutlinedButton(
+            onClick = { /*TODO*/ },
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 10.dp,)
+        ) {
+            Text(
+                text = "Terms",
+                fontWeight = FontWeight.Bold,
+                color = ColorBlue
+            )
+        }
+
+        OutlinedButton(
+            onClick = { /*TODO*/ },
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 10.dp,)
+        ) {
+            Text(
+                text = "ACKNOWLEDGEMENTS",
+                fontWeight = FontWeight.Bold,
+                color = ColorBlue
+            )
+        }
+    }
 }
