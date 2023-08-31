@@ -62,7 +62,22 @@ val GetApp_Btn_Text = Color(0xB9007BFF)
 val ColorBlue = Color(0xFF03A8F8)
 val QuestAndBadge_TabBackGround = Color(0xFF6650a4)
 
-// Quest and Badge
+// Quest and Badge Screen
 val TimeLeft_txt = Color(0xFFfa8231)
+
+// Section Screen
+val Unlocked_BackGround = Color(0xFF00AF84)
+val Locked_BackGround = Color(0xFFACB1B0)
+val dot_selected = Color(0xFFFFFFFF)
+val dot_notSelected = Color(0x8B727070)
+val Unlocked_txt = Color(0xFFFFFFFF)
+val Locked_txt = Color(0xFF505353)
+val Unlocked_Card_BackGround = Color(0xFF017457)
+val Locked_Card_BackGround = Color(0xFF9DA3A1)
+val Unlocked_Card_Button_txt = Color(0xFF017457)
+val Locked_Card_Button_txt = Color(0xB900CDFF)
+
+////
 val LightBlue1 = Color(0xFFB7D0DB)
 val ColorYellow = Color(0xFFFFBF27)
+
