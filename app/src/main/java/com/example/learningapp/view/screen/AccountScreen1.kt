@@ -45,14 +45,14 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
+import androidx.navigation.NavController
 import com.example.learningapp.R
 import com.example.learningapp.view.theme.ColorBlue
 import com.example.learningapp.view.theme.darkGreen
 
 @OptIn(ExperimentalMaterial3Api::class)
-@Preview(showBackground = true)
 @Composable
-fun AccountScreen(){
+fun AccountScreen(navController: NavController){
     val state = rememberScrollState()
     ConstraintLayout(modifier = Modifier
         .fillMaxSize()
