@@ -145,4 +145,7 @@
     <string name="hello_i_am_juan">Hello, I am Juan.</string>
     <string name="mucho_gusto">Mucho gusto.</string>
     <string name="nice_to_meet_you">Nice to meet you.</string>
+    <string name="complete_each_month">Complete each month\'s challenge to earn exclusive badges</string>
+    <string name="earn_your_first_badge">Earn your first badge!</string>
+    <string name="enter_your_details">Enter your details</string>
 </resources>

@@ -33,6 +33,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
@@ -95,7 +96,7 @@ fun SignInEmailScreen(navController: NavController) {
                     start.linkTo(parent.start)
                     end.linkTo(parent.end)
                 },
-            text = "Enter your details"
+            text = stringResource(id = R.string.enter_your_details)
         )
 
         Column(

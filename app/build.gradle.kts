@@ -91,9 +91,10 @@ dependencies {
     implementation("androidx.compose.material3:material3:1.1.1")
     implementation("androidx.compose.material3:material3-window-size-class:1.1.1")
 
-
     //For More material Icons
     implementation("androidx.compose.material:material-icons-extended:1.5.0")
-
-
+    //Retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2")
 }
