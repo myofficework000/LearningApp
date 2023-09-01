@@ -117,15 +117,13 @@
     <string name="expression">Expression</string>
     <string name="headwear">Headwear</string>
     <string name="headwear_color">Headwear color</string>
-
     <string name="verbguide_subtitle">I think, therefore ..</string>
     <string name="verbguide_title">Tip</string>
     <string name="VerbScreen_description">In English, verb forms change depending on who\'s doing the action. For example, we say I am, you are, and she is. In Spanish, you do the same thing.</string>
     <string name="VerbScreen_Example">I am a girl. You are a boy</string>
-
     <string name="unit_1_guidebook">Unit 1 Guidebook</string>
     <string name="explore_grammar_tips">Explore grammar tips and key phrases for this unit</string>
-    <string name="key_phrases">KEY PHRASES</string>
+    <string name="key_phrases_ss">KEY PHRASES</string>
     <string name="form_sentences">Form basic sentences</string>
     <string name="spanish_sentence_1">Un nino come manzanas.</string>
     <string name="english_sentence_1">A boy eats apples</string>
@@ -133,5 +131,18 @@
     <string name="english_sentence_2">A girl drinks water.</string>
     <string name="spanish_sentence_3">La mujer bebe leche.</string>
     <string name="english_sentence_3">The woman drinks milk.</string>
-
+    <string name="greet_people">Greet people</string>
+    <string name="volume_up">volume up</string>
+    <string name="holla_buenos_dias">Holla, buenos dias.</string>
+    <string name="hello_good_morning">Hello, good morning.</string>
+    <string name="buenos_dias">Buenos dias!</string>
+    <string name="good_morning">Good morning!</string>
+    <string name="adios_buenas_noches">Adios, buenas noches.</string>
+    <string name="bye_good_night">Bye, good night.</string>
+    <string name="buenas_noches">Buenas noches!</string>
+    <string name="good_night">Good night!</string>
+    <string name="hola_yo_soy_juan">Hola, yo soy Juan.</string>
+    <string name="hello_i_am_juan">Hello, I am Juan.</string>
+    <string name="mucho_gusto">Mucho gusto.</string>
+    <string name="nice_to_meet_you">Nice to meet you.</string>
 </resources>
