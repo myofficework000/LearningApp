@@ -77,7 +77,7 @@ fun VerbGuideScreen() {
             fontWeight = FontWeight.Bold,
             modifier = Modifier.padding(horizontal = 20.dp, vertical = 10.dp))
         Text(
-            text = DESCRIPTION,
+            text = stringResource(R.string.VerbScreen_description),
             color = Color.Black,
             fontSize = 18.sp,
             modifier = Modifier.padding(horizontal = 20.dp, vertical = 10.dp))
@@ -100,7 +100,9 @@ fun VerbGuideScreen() {
             }
         }
        CardWithImg()
-        Row(modifier = Modifier.fillMaxWidth().padding(horizontal = 10.dp)) {
+        Row(modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 10.dp)) {
             Icon(
                 painter = painterResource(id = R.drawable.icons8_sound_100),
                 contentDescription = "Icon"
@@ -114,7 +116,7 @@ fun VerbGuideScreen() {
             )
         }
         Text(
-            text = "I am a girl. You are a boy",
+            text = stringResource(R.string.VerbScreen_Example),
             color = Color.Gray,
             fontSize = 16.sp,
             modifier = Modifier.padding(horizontal = 20.dp)
@@ -204,9 +206,3 @@ fun getListOfSubjectAndVerb() = listOf(
     SubjectAndVerb("she","ella","she is", "es")
 
 )
-
-
-object Constant{
-    const val DESCRIPTION= "In English, verb forms change depending on who's doing the action. " +
-            "For example, we say I am, you are, and she is. In Spanish, you do the same thing."
-}

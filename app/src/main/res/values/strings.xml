@@ -119,4 +119,6 @@
     <string name="headwear_color">Headwear color</string>
     <string name="verbguide_subtitle">I think, therefore ..</string>
     <string name="verbguide_title">Tip</string>
+    <string name="VerbScreen_description">In English, verb forms change depending on who\'s doing the action. For example, we say I am, you are, and she is. In Spanish, you do the same thing.</string>
+    <string name="VerbScreen_Example">I am a girl. You are a boy</string>
 </resources>
