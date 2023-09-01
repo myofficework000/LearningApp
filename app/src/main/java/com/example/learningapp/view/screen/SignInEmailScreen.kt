@@ -46,6 +46,8 @@ import com.example.learningapp.view.screen.utils.moveToDashBoardScreen
 import com.example.learningapp.view.screen.utils.showToast
 import com.example.learningapp.view.theme.GreyWhite
 import com.example.learningapp.viewmodel.SignInSignUpViewModel
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -61,6 +63,17 @@ fun SignInEmailScreen(navController: NavController) {
     val registrationStatus = signInSignUpViewModel.registrationStatus.observeAsState()
     val registrationEmailStatus = signInSignUpViewModel.registrationEmailStatus.observeAsState()
     val savedToFireStore = signInSignUpViewModel.savedToFireStore.observeAsState()
+    var user by remember { mutableStateOf(Firebase.auth.currentUser) }
+    val launcher = rememberFirebaseAuthLauncher(
+        onAuthComplete = { result ->
+            user = result.user
+            moveToDashBoardScreen(context)
+        },
+        onAuthError = {
+            user = null
+        }
+    )
+    val token = stringResource(R.string.default_web_client_id)
 
     loginStatus.value?.let {
         showToast(context, it)
@@ -198,7 +211,9 @@ fun SignInEmailScreen(navController: NavController) {
                 containerColor = Color.Transparent,
                 contentColor = Color.Black
             ),
-            onClick = { /* Handle Google login */ },
+            onClick = {
+                googleSignInRequest(context, token, launcher)
+            },
             modifier = Modifier
                 .fillMaxWidth()
                 .border(

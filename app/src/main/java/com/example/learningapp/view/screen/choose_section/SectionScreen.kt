@@ -5,14 +5,12 @@ import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -35,18 +33,18 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.example.learningapp.R
-import com.example.learningapp.modal.dto.DailyQuest
 import com.example.learningapp.modal.dto.Section
+import com.example.learningapp.view.navigation.Screen
 import com.example.learningapp.view.theme.Green100
-import com.example.learningapp.view.theme.Green40
 import com.example.learningapp.view.theme.Locked_BackGround
 import com.example.learningapp.view.theme.Locked_Card_BackGround
 import com.example.learningapp.view.theme.Locked_Card_Button_txt
@@ -61,20 +59,23 @@ import com.example.learningapp.view.theme.Unlocked_txt
 @Composable
 fun PreviewSectionScreen() {
     SectionScreen(
-        Section("test",
-            "sadfasdf",
+        Section(
+            "test",
+            "steadfast",
             0,
             5,
             R.drawable.ic_facebook,
-            true))
+            true
+        ), rememberNavController()
+    )
 }
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun SectionScreen(section: Section) {
+fun SectionScreen(section: Section, navController: NavController) {
     ConstraintLayout(modifier = Modifier.fillMaxSize()) {
         val (topButtonsContainer, divider, cardAndImage) = createRefs()
-        TopButtonsContainer( isUnlocked = section.isUnlocked,
+        TopButtonsContainer(isUnlocked = section.isUnlocked,
             modifier = Modifier.constrainAs(topButtonsContainer) {
                 top.linkTo(parent.top)
                 start.linkTo(parent.start)
@@ -93,7 +94,8 @@ fun SectionScreen(section: Section) {
                     width = Dimension.fillToConstraints
                 }
         )
-        CardAndImageContainer( section= section,
+        CardAndImageContainer(
+            section = section,
             modifier = Modifier.constrainAs(cardAndImage) {
                 top.linkTo(divider.bottom)
                 start.linkTo(parent.start)
@@ -101,25 +103,28 @@ fun SectionScreen(section: Section) {
                 bottom.linkTo(parent.bottom)
                 width = Dimension.fillToConstraints
                 height = Dimension.fillToConstraints
-            })
+            }, navController = navController
+        )
 
     }
 
 }
 
 @Composable
-fun TopButtonsContainer(modifier: Modifier, isUnlocked: Boolean){
-    val backgroundColor = if(isUnlocked) Unlocked_BackGround else Locked_BackGround
-    ConstraintLayout( modifier = modifier
-        .fillMaxWidth()
-        .background(backgroundColor)) {
-        val (chooseLanguage, steak,diamond, heart) = createRefs()
+fun TopButtonsContainer(modifier: Modifier, isUnlocked: Boolean) {
+    val backgroundColor = if (isUnlocked) Unlocked_BackGround else Locked_BackGround
+    ConstraintLayout(
+        modifier = modifier
+            .fillMaxWidth()
+            .background(backgroundColor)
+    ) {
+        val (chooseLanguage, steak, diamond, heart) = createRefs()
         val guideline = createGuidelineFromStart(0.5f)
         OutlinedButton(
             onClick = { /* Action to perform */ },
             colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.Black),
             border = null,
-            modifier = Modifier.constrainAs(chooseLanguage){
+            modifier = Modifier.constrainAs(chooseLanguage) {
                 top.linkTo(parent.top)
                 start.linkTo(parent.start)
                 width = Dimension.wrapContent
@@ -134,22 +139,22 @@ fun TopButtonsContainer(modifier: Modifier, isUnlocked: Boolean){
             colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.Black),
             border = null,
             modifier = Modifier
-                .constrainAs(steak){
-                top.linkTo(parent.top)
-                start.linkTo(chooseLanguage.end)
-                end.linkTo(guideline)
-                width = Dimension.wrapContent
-                height = Dimension.wrapContent
-            }
+                .constrainAs(steak) {
+                    top.linkTo(parent.top)
+                    start.linkTo(chooseLanguage.end)
+                    end.linkTo(guideline)
+                    width = Dimension.wrapContent
+                    height = Dimension.wrapContent
+                }
         ) {
             Icon(Icons.Default.LocalFireDepartment, contentDescription = "Search")
-            Text(text ="1",modifier = Modifier.padding(horizontal = 5.dp))
+            Text(text = "1", modifier = Modifier.padding(horizontal = 5.dp))
         }
         OutlinedButton(
             onClick = { /* Action to perform */ },
             colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.Black),
             border = null,
-            modifier = Modifier.constrainAs(diamond){
+            modifier = Modifier.constrainAs(diamond) {
                 top.linkTo(parent.top)
                 end.linkTo(heart.start)
                 start.linkTo(guideline)
@@ -157,34 +162,35 @@ fun TopButtonsContainer(modifier: Modifier, isUnlocked: Boolean){
                 height = Dimension.wrapContent
             }
         ) {
-            Icon(Icons.Default.Diamond,tint = Color.Blue, contentDescription = "Search")
-            Text(text = "500",modifier = Modifier.padding(horizontal = 5.dp))
+            Icon(Icons.Default.Diamond, tint = Color.Blue, contentDescription = "Search")
+            Text(text = "500", modifier = Modifier.padding(horizontal = 5.dp))
         }
         OutlinedButton(
             onClick = { /* Action to perform */ },
             colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.Black),
             border = null,
-            modifier = Modifier.constrainAs(heart){
+            modifier = Modifier.constrainAs(heart) {
                 top.linkTo(parent.top)
                 end.linkTo(parent.end)
                 width = Dimension.wrapContent
                 height = Dimension.wrapContent
             }
         ) {
-            Icon(Icons.Default.HeartBroken,tint= Color.Red, contentDescription = "Search")
-            Text(text = "5",modifier = Modifier.padding(horizontal = 5.dp))
+            Icon(Icons.Default.HeartBroken, tint = Color.Red, contentDescription = "Search")
+            Text(text = "5", modifier = Modifier.padding(horizontal = 5.dp))
         }
     }
 
 }
 
 @Composable
-fun CardAndImageContainer(modifier: Modifier, section: Section){
-    val backgroundColor = if(section.isUnlocked) Unlocked_BackGround else Locked_BackGround
+fun CardAndImageContainer(modifier: Modifier, section: Section, navController: NavController) {
+    val backgroundColor = if (section.isUnlocked) Unlocked_BackGround else Locked_BackGround
     ConstraintLayout(
         modifier = modifier
             .fillMaxHeight()
-            .background(backgroundColor)) {
+            .background(backgroundColor)
+    ) {
         val (img, card) = createRefs()
         Image(painter = painterResource(id = section.thumbnailImg),
             contentDescription = "hearFrom Img ",
@@ -198,23 +204,26 @@ fun CardAndImageContainer(modifier: Modifier, section: Section){
 
                 }
         )
-        CardContainer( section = section,
+        CardContainer(
+            section = section,
             modifier = Modifier
                 .padding(20.dp)
                 .constrainAs(card) {
                     start.linkTo(parent.start)
                     end.linkTo(parent.end)
                     top.linkTo(img.bottom)
-                })
+                }, navController = navController
+        )
 
     }
 }
 
 @Composable
-fun CardContainer(modifier: Modifier, section: Section){
-    val textColor = if(section.isUnlocked) Unlocked_txt else Locked_txt
-    val btnTextColor = if(section.isUnlocked) Unlocked_Card_Button_txt else Locked_Card_Button_txt
-    val backgroundColor = if(section.isUnlocked) Unlocked_Card_BackGround else Locked_Card_BackGround
+fun CardContainer(modifier: Modifier, section: Section, navController: NavController) {
+    val textColor = if (section.isUnlocked) Unlocked_txt else Locked_txt
+    val btnTextColor = if (section.isUnlocked) Unlocked_Card_Button_txt else Locked_Card_Button_txt
+    val backgroundColor =
+        if (section.isUnlocked) Unlocked_Card_BackGround else Locked_Card_BackGround
     Card(
         colors = CardDefaults.cardColors(backgroundColor),
         modifier = modifier
@@ -227,11 +236,11 @@ fun CardContainer(modifier: Modifier, section: Section){
             Modifier
                 .padding(10.dp)
         ) {
-            val (title , progressBar, description, button) = createRefs()
+            val (title, progressBar, description, button) = createRefs()
             Text(text = section.title,
                 fontSize = 30.sp,
                 color = textColor,
-                modifier= Modifier
+                modifier = Modifier
                     .padding(20.dp)
                     .constrainAs(title) {
                         top.linkTo(parent.top)
@@ -240,8 +249,8 @@ fun CardContainer(modifier: Modifier, section: Section){
                         width = Dimension.wrapContent
                         height = Dimension.wrapContent
                     })
-            ProgressItemCard(section= section,
-                modifier = Modifier.constrainAs(progressBar){
+            ProgressItemCard(section = section,
+                modifier = Modifier.constrainAs(progressBar) {
                     top.linkTo(title.bottom)
                     start.linkTo(parent.start)
                     end.linkTo(parent.end)
@@ -249,7 +258,7 @@ fun CardContainer(modifier: Modifier, section: Section){
             Text(text = section.description,
                 fontSize = 15.sp,
                 color = textColor,
-                modifier= Modifier
+                modifier = Modifier
                     .padding(20.dp)
                     .constrainAs(description) {
                         top.linkTo(progressBar.bottom)
@@ -260,7 +269,7 @@ fun CardContainer(modifier: Modifier, section: Section){
                     })
 
             Button(
-                onClick = { },
+                onClick = { navController.navigate(Screen.PathScreen.route) },
                 colors = ButtonDefaults.buttonColors(Color.White),
                 modifier = Modifier
                     .padding(20.dp)
@@ -273,17 +282,20 @@ fun CardContainer(modifier: Modifier, section: Section){
                         height = Dimension.wrapContent
                     }
             ) {
-                Text(text = "Start" ,
+                Text(
+                    text = "Start",
                     fontSize = 18.sp,
                     fontWeight = FontWeight.ExtraBold,
                     color = btnTextColor,
-                    modifier= Modifier)
+                    modifier = Modifier
+                )
             }
 
         }
 
     }
 }
+
 @Composable
 fun ProgressItemCard(modifier: Modifier, section: Section) {
     Box(

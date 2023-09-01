@@ -26,13 +26,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.example.learningapp.R
 import com.example.learningapp.view.screen.utils.OwlAnimation
 import com.example.learningapp.view.theme.Green100
 
-@Preview
 @Composable
-fun PathScreen(){
+fun PathScreen() {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -54,27 +54,30 @@ fun PathScreen(){
                     fontWeight = FontWeight.Bold,
                     fontSize = 20.sp,
                     color = Color.White,
-                    text = stringResource(R.string.unit_1))
+                    text = stringResource(R.string.unit_1)
+                )
                 Text(
                     modifier = Modifier
                         .padding(5.dp),
                     color = Color.White,
                     fontSize = 16.sp,
-                    text = stringResource(R.string.form_basic_sentences))
+                    text = stringResource(R.string.form_basic_sentences)
+                )
             }
             Image(
                 modifier = Modifier
                     .padding(20.dp)
                     .size(30.dp),
                 painter = painterResource(id = R.drawable.ic_note_white),
-                contentDescription = "notebook")
+                contentDescription = "notebook"
+            )
         }
         Column(
             modifier = Modifier
                 .fillMaxWidth()
                 .verticalScroll(rememberScrollState()),
             horizontalAlignment = Alignment.CenterHorizontally
-        ){
+        ) {
             Card(
                 modifier = Modifier
                     .offset(0.dp, 2.dp)
@@ -89,7 +92,8 @@ fun PathScreen(){
                     fontWeight = FontWeight.Bold,
                     modifier = Modifier
                         .padding(10.dp),
-                    text = stringResource(R.string.start))
+                    text = stringResource(R.string.start)
+                )
             }
             Image(
                 modifier = Modifier
@@ -97,7 +101,8 @@ fun PathScreen(){
                     .size(70.dp),
                 alignment = Alignment.CenterEnd,
                 painter = painterResource(id = R.drawable.ic_star_green),
-                contentDescription = "star")
+                contentDescription = "star"
+            )
 
             Image(
                 modifier = Modifier
@@ -106,7 +111,8 @@ fun PathScreen(){
                     .size(70.dp),
                 alignment = Alignment.CenterEnd,
                 painter = painterResource(id = R.drawable.ic_lock_grey),
-                contentDescription = "lock")
+                contentDescription = "lock"
+            )
 
             Row {
                 Image(
@@ -116,11 +122,13 @@ fun PathScreen(){
                         .size(70.dp),
                     alignment = Alignment.CenterEnd,
                     painter = painterResource(id = R.drawable.ic_lock_grey),
-                    contentDescription = "lock")
+                    contentDescription = "lock"
+                )
                 OwlAnimation(
                     Modifier
                         .offset(50.dp, 0.dp)
-                        .size(120.dp))
+                        .size(120.dp)
+                )
             }
 
             Image(
@@ -130,7 +138,8 @@ fun PathScreen(){
                     .size(70.dp),
                 alignment = Alignment.CenterEnd,
                 painter = painterResource(id = R.drawable.ic_treasure_grey),
-                contentDescription = "treasure")
+                contentDescription = "treasure"
+            )
 
             Image(
                 modifier = Modifier
@@ -139,7 +148,8 @@ fun PathScreen(){
                     .size(70.dp),
                 alignment = Alignment.CenterEnd,
                 painter = painterResource(id = R.drawable.ic_lock_grey),
-                contentDescription = "lock")
+                contentDescription = "lock"
+            )
 
             Image(
                 modifier = Modifier
@@ -148,7 +158,8 @@ fun PathScreen(){
                     .size(70.dp),
                 alignment = Alignment.CenterEnd,
                 painter = painterResource(id = R.drawable.ic_lock_grey),
-                contentDescription = "lock")
+                contentDescription = "lock"
+            )
 
             Image(
                 modifier = Modifier
@@ -157,7 +168,8 @@ fun PathScreen(){
                     .size(70.dp),
                 alignment = Alignment.CenterEnd,
                 painter = painterResource(id = R.drawable.ic_lock_grey),
-                contentDescription = "lock")
+                contentDescription = "lock"
+            )
 
             Image(
                 modifier = Modifier
@@ -166,7 +178,8 @@ fun PathScreen(){
                     .size(70.dp),
                 alignment = Alignment.CenterEnd,
                 painter = painterResource(id = R.drawable.ic_treasure_grey),
-                contentDescription = "treasure")
+                contentDescription = "treasure"
+            )
 
             Image(
                 modifier = Modifier
@@ -175,7 +188,8 @@ fun PathScreen(){
                     .size(70.dp),
                 alignment = Alignment.CenterEnd,
                 painter = painterResource(id = R.drawable.ic_trophy_grey),
-                contentDescription = "treasure")
+                contentDescription = "treasure"
+            )
         }
     }
 

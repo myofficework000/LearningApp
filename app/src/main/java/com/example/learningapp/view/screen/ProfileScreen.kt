@@ -53,8 +53,6 @@ import com.example.learningapp.view.theme.LightBlue1
 import com.example.learningapp.view.theme.LightGrey
 import com.example.learningapp.view.theme.lightBlack
 
-
-
 @Composable
 fun ProfileScreen(navController: NavController) {
     val state = rememberScrollState()

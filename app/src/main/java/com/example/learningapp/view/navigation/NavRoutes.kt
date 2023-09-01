@@ -39,4 +39,5 @@ object NavRoutes {
     const val LEARNING = "Learning"
     const val QUEST_AND_BADGES = "QuestAndBadges"
     const val CHOOSE_SECTION = "ChooseSection"
+    const val PATH_SCREEN = "PathScreen"
 }
