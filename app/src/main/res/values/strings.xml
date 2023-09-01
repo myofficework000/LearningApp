@@ -117,4 +117,6 @@
     <string name="expression">Expression</string>
     <string name="headwear">Headwear</string>
     <string name="headwear_color">Headwear color</string>
+    <string name="verbguide_subtitle">I think, therefore ..</string>
+    <string name="verbguide_title">Tip</string>
 </resources>

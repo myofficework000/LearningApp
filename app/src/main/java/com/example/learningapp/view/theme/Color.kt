@@ -81,3 +81,10 @@ val Locked_Card_Button_txt = Color(0xB900CDFF)
 val LightBlue1 = Color(0xFFB7D0DB)
 val ColorYellow = Color(0xFFFFBF27)
 
+/// Verb Guide
+val VerbGuide_Background = Color(0xFFDCF3FE)
+val VerbGuide_Title_Text = Color(0xFF25ACEA)
+val VerbGuide_Header_Background = Color(0xFFB8E7F9)
+val VerbGuide_Text = Color(0xFF25ACEA)
+val VerbGuide_Table_Border = Color(0xFF04A7F1)
+
