@@ -117,4 +117,5 @@
     <string name="expression">Expression</string>
     <string name="headwear">Headwear</string>
     <string name="headwear_color">Headwear color</string>
+    <string name="as_in">"As in "</string>
 </resources>
