@@ -117,6 +117,7 @@
     <string name="expression">Expression</string>
     <string name="headwear">Headwear</string>
     <string name="headwear_color">Headwear color</string>
+    <string name="as_in">"As in "</string>
     <string name="verbguide_subtitle">I think, therefore ..</string>
     <string name="verbguide_title">Tip</string>
     <string name="VerbScreen_description">In English, verb forms change depending on who\'s doing the action. For example, we say I am, you are, and she is. In Spanish, you do the same thing.</string>
