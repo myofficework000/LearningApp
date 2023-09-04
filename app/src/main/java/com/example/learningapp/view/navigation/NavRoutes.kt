@@ -29,7 +29,7 @@ object NavRoutes {
     const val TRANSLATE_SENTENCE_ZULU_SCREEN = "TranslateSentenceZuluScreen"
     const val SELECT_STREAK_GOAL_SCREEN = "SelectStreakGoalScreen"
     const val CHAT_UI = "ChatUi"
-
+    const val ACCOUNT_SCREEN1 = "AccountScreen"
 
 
     // Main Screen Constants

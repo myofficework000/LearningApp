@@ -5,6 +5,7 @@ import android.annotation.SuppressLint
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -46,12 +47,14 @@ import androidx.constraintlayout.compose.Dimension
 import androidx.navigation.NavController
 import com.example.learningapp.R
 import com.example.learningapp.modal.dto.Statistics
+import com.example.learningapp.view.navigation.Screen
 import com.example.learningapp.view.theme.ColorBlue
 import com.example.learningapp.view.theme.ColorYellow
 import com.example.learningapp.view.theme.GreyWhite
 import com.example.learningapp.view.theme.LightBlue1
 import com.example.learningapp.view.theme.LightGrey
 import com.example.learningapp.view.theme.lightBlack
+
 
 @Composable
 fun ProfileScreen(navController: NavController) {
@@ -66,6 +69,7 @@ fun ProfileScreen(navController: NavController) {
         val (boxProfile, profileName, dividerOne, flagImage, profileId,
             personJoined, following, followers, cardView,
             btnUp, btnAddFriends, dividerTwo, listView,statisticsText,achievementsText,AchievementsCard) = createRefs()
+        val settingimage = createRef()
         val guidLine = createGuidelineFromTop(0.2f)
 
 
@@ -88,6 +92,17 @@ fun ProfileScreen(navController: NavController) {
 
                 )
         }
+
+        Image(
+            modifier = Modifier.size(50.dp).padding(8.dp).constrainAs(settingimage){
+                top.linkTo(parent.top)
+                end.linkTo(parent.end)
+            }
+                .clickable {
+                    navController.navigate(Screen.AccountScreen.route)
+                },
+            painter = painterResource(R.drawable.baseline_settings_24), contentDescription = "image",
+        )
 
         Divider(thickness = 2.dp,
             color = Color.LightGray,
@@ -273,7 +288,6 @@ fun ProfileScreen(navController: NavController) {
 
     }
 }
-
 
 
 @SuppressLint("SuspiciousIndentation")

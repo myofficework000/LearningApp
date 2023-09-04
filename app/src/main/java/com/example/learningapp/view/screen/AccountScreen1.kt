@@ -1,6 +1,7 @@
 package com.example.learningapp.view.screen
 
 
+import android.content.Context
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
@@ -47,12 +48,13 @@ import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
 import androidx.navigation.NavController
 import com.example.learningapp.R
+import com.example.learningapp.view.screen.utils.deleteSharedPref
 import com.example.learningapp.view.theme.ColorBlue
 import com.example.learningapp.view.theme.darkGreen
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun AccountScreen(navController: NavController){
+fun AccountScreen(navController: NavController,context: Context){
     val state = rememberScrollState()
     ConstraintLayout(modifier = Modifier
         .fillMaxSize()
@@ -209,7 +211,9 @@ fun AccountScreen(navController: NavController){
                     fontWeight = FontWeight.Bold,
                     color = ColorBlue)
             }
-            OutlinedButton(onClick = { /*TODO*/ },
+            OutlinedButton(onClick = {
+                context.deleteSharedPref()
+            },
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = 10.dp,)

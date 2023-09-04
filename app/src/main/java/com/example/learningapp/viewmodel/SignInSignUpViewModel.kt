@@ -1,9 +1,11 @@
 package com.example.learningapp.viewmodel
 
+import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.learningapp.modal.dto.User
+import com.example.learningapp.view.screen.utils.putStringInSharedPreferences
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FirebaseFirestore
@@ -53,7 +55,7 @@ class SignInSignUpViewModel : ViewModel() {
         }
     }
 
-    fun login(email: String, password: String) {
+    fun login(email: String, password: String,context: Context) {
         if (firebaseAuth.currentUser != null) {
             firebaseUser = firebaseAuth.currentUser!!
         }
@@ -62,6 +64,10 @@ class SignInSignUpViewModel : ViewModel() {
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     _loginStatus.value = "Login Success!!"
+                    // Add to sharedPreference
+                    context.putStringInSharedPreferences("email",email)
+                    context.putStringInSharedPreferences("password",password)
+
                 } else {
                     _loginStatus.value = "Login Failed!!"
                 }
