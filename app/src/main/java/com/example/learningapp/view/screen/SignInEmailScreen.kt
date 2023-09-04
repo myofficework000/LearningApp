@@ -1,5 +1,6 @@
 package com.example.learningapp.view.screen
 
+import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -39,9 +40,9 @@ import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.example.learningapp.R
+import com.example.learningapp.modal.dto.User
 import com.example.learningapp.view.screen.utils.moveToDashBoardScreen
 import com.example.learningapp.view.screen.utils.showToast
 import com.example.learningapp.view.theme.GreyWhite
@@ -51,9 +52,13 @@ import com.google.firebase.ktx.Firebase
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun SignInEmailScreen(navController: NavController) {
+fun SignInEmailScreen(
+    navController: NavController,
+    signInSignUpViewModel: SignInSignUpViewModel
+    ) {
+
     val context = LocalContext.current
-    val signInSignUpViewModel: SignInSignUpViewModel = viewModel()
+   // val signInSignUpViewModel: SignInSignUpViewModel = viewModel()
 
     var userName by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
@@ -67,6 +72,8 @@ fun SignInEmailScreen(navController: NavController) {
     val launcher = rememberFirebaseAuthLauncher(
         onAuthComplete = { result ->
             user = result.user
+
+            signInSignUpViewModel.checkAndAddIntoRoomLocalDatabase(user)
             moveToDashBoardScreen(context)
         },
         onAuthError = {

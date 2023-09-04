@@ -7,6 +7,7 @@ import androidx.room.Query
 import androidx.room.Update
 import com.example.learningapp.modal.dto.User
 
+
 @Dao
 interface UserDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
@@ -15,8 +16,8 @@ interface UserDao {
     @Update
     fun updateUser(user: User)
 
-    @Query("SELECT * FROM User WHERE  userId = :userId")
-    fun findUserById(userId:String):User
+    @Query("SELECT * FROM User WHERE  uid = :uid")
+    fun findUserById(uid:String):User
 
     @Query("Select * From User")
     fun getAllUser(): List<User>
