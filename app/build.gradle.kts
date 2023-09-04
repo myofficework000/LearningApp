@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("com.google.gms.google-services")
+    id("com.google.devtools.ksp") version "1.8.10-1.0.9"
 }
 
 android {
@@ -49,6 +50,11 @@ android {
         }
     }
 }
+//Additional for KSP set up
+kotlin {
+    jvmToolchain(8)
+}
+
 
 dependencies {
 
@@ -97,4 +103,9 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2")
+
+
+    //Room Dependency
+    implementation("androidx.room:room-runtime:2.5.2")
+    ksp("androidx.room:room-compiler:2.5.2")
 }
