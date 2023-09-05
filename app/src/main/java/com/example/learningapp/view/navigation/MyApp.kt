@@ -59,7 +59,7 @@ import com.example.learningapp.view.screen.WhatIsStreakScreen
 import com.example.learningapp.viewmodel.SignInSignUpViewModel
 
 @Composable
-fun MyApp(signInSignUpViewModel: SignInSignUpViewModel) {
+fun MyApp() {
     val navController = rememberNavController()
 
 
@@ -83,8 +83,7 @@ fun MyApp(signInSignUpViewModel: SignInSignUpViewModel) {
         composable(route = HOW_DO_YOU_SAY_SCREEN) { HowDoYouSay(navController) }
         composable(route = HEAR_AND_CHOOSE_SCREEN) { HearAndChooseWordScreen(navController) }
         composable(route = SIGN_IN_EMAIL_SCREEN) { SignInEmailScreen(
-            navController=navController,
-            signInSignUpViewModel=signInSignUpViewModel) }
+            navController=navController) }
         composable(route = STREAK_SCREEN) { StreakScreen(navController) }
         composable(route = TRANSLATE_SENTENCE_SCREEN) { TranslateSentenceBrother(navController) }
         composable(route = LETS_SCREEN) { LetsScreen(navController) }

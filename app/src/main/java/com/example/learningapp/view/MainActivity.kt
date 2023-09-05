@@ -36,7 +36,7 @@ class MainActivity : ComponentActivity() {
                         moveToDashBoardScreen(this)
                     } else {
 
-                        MyApp(signInSignUpViewModel)
+                        MyApp()
                     }
                 }
             }

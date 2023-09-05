@@ -114,6 +114,7 @@ dependencies {
     //Dagger-hilt
     implementation("com.google.dagger:hilt-android:2.45")
     kapt("com.google.dagger:hilt-android-compiler:2.45")
+    implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
 
     // ktx activity with view model injection
     implementation("androidx.activity:activity-ktx:1.7.2")

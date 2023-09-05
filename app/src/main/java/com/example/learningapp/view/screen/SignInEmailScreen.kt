@@ -40,6 +40,8 @@ import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
+import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.example.learningapp.R
 import com.example.learningapp.modal.dto.User
@@ -53,12 +55,11 @@ import com.google.firebase.ktx.Firebase
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SignInEmailScreen(
-    navController: NavController,
-    signInSignUpViewModel: SignInSignUpViewModel
+    navController: NavController
     ) {
 
     val context = LocalContext.current
-   // val signInSignUpViewModel: SignInSignUpViewModel = viewModel()
+    val signInSignUpViewModel: SignInSignUpViewModel = hiltViewModel()
 
     var userName by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
