@@ -98,6 +98,5 @@ fun MyApp(signInSignUpViewModel: SignInSignUpViewModel) {
         composable(route = PROFILE_SCREEN) {ProfileScreen(navController)}
         composable(route = DAY_STREAK_SCREEN) {DayStreakScreen(navController=navController)}
         composable(route = WHAT_IS_STREAK_SCREEN) {WhatIsStreakScreen(navController=navController)}
-
     }
 }
