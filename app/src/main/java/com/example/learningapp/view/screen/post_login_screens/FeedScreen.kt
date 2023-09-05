@@ -1,4 +1,4 @@
-package com.example.learningapp.view.screen
+package com.example.learningapp.view.screen.post_login_screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
