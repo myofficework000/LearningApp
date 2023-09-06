@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LearningApp</string>
+    <string name="english_language">English</string>
+    <string name="hindi_language">Hindi</string>
+    <string name="chinese_language">Chinese</string>
+    <string name="german_language">German</string>
+    <string name="italian_language">Italian</string>
+    <string name="spanish_language">Spanish</string>
+    <string name="french_language">French</string>
+    <string name="arabic_language">Arabic</string>
+    <string name="btn_continue">متابعة</string>
+    <string name="hearing_from">كيف سمعت عن تطبيقنا التعليمي؟</string>
+    <string name="intro_text">الطريقة المجانية والممتعة والفعالة لتعلم اللغة!</string>
+    <string name="intro_title">دوولينجو</string>
+    <string name="start_fresh">حسنًا، سنبدأ من جديد!</string>
+    <string name="knowledge_screen_title">كم من الإسبانية تعرف؟</string>
+    <string name="knowledge_text1">أنا جديد في الإسبانية</string>
+    <string name="knowledge_text2">أعرف بعض الكلمات والعبارات</string>
+    <string name="knowledge_text3">أستطيع إجراء محادثات بسيطة</string>
+    <string name="knowledge_text4">مستواي متوسط إلى متقدم</string>
+    <string name="Button_Continue_Caps">متابعة</string>
+    <string name="intro_text_ready">مرحبًا! أنا دوو</string>
+    <string name="intro_achieve">إليك ما يمكنك تحقيقه!</string>
+    <string name="get_started">ابدأ\n</string>
+    <string name="i_have_already_account">لدي حساب بالفعل</string>
+    <string name="what_you_want_to_learn">ما الذي ترغب في تعلمه؟</string>
+    <string name="sign_in_from_email">تسجيل الدخول باستخدام البريد الإلكتروني\n</string>
+    <string name="reminder_notification">سأذكرك بممارسة التمرين حتى يصبح عادة</string>
+    <string name="allow">السماح</string>
+    <string name="do_not_allow">عدم السماح</string>
+    <string name="send_notification">هل تسمح لدوولينجو بإرسال لك إشعارات؟</string>
+    <string name="the_girls">الفتيات</string>
+    <string name="the_boy">الفتى</string>
+    <string name="the_women">النساء</string>
+    <string name="the_man">الرجل</string>
+    <string name="BUTTON_CHECK_CAPS">فحص</string>
+    <string name="TEXT_EL_HOMRE">الرجل</string>
+    <string name="select_correct_image">اختر الصورة الصحيحة</string>
+    <string name="new_word">كلمة جديدة</string>
+    <string name="it_can_be_hard_to_stay_motivated">من الصعب البقاء متحفزًا...</string>
+    <string name="so_duolingo_fun_like_a_game">...لذلك تم تصميم دوولينجو ليكون ممتعًا مثل اللعبة!</string>
+    <string name="choose_start_level">الآن، دعونا نجد أفضل مكان للبدء!</string>
+    <string name="how_do_you_say_sister">كيف تقول "أخت"؟</string>
+    <string name="check_str">فحص</string>
+    <string name="btn_check">فحص</string>
+    <string name="btn_cant_listen">لا يمكن الاستماع الآن</string>
+    <string name="what_do_you_hear">ماذا تسمع؟</string>
+    <string name="zulu">ساوبونا، ماما.</string>
+    <string name="skip">تخطي</string>
+    <string name="check">فحص</string>
+    <string name="what_is_streak">ما هو الاستمرار؟</string>
+    <string name="brother">أخ</string>
+    <string name="translate_sentence">ترجم هذه الجملة</string>
+    <string name="streak_message">لكن سيتم إعادة تعيين استمرارك إذا لم تمارس غدًا. احذر!</string>
+    <string name="streak_Count">الاستمرار يعد كم يومًا قمت بممارستها على التوالي</string>
+    <string name="keep_your_streak_alive">احتفظ باستمرارك!</string>
+    <string name="best_way_to_learn">التمرين اليومي هو أفضل طريقة لتعلم لغة. هيا بنا!</string>
+    <string name="i_m_ready">أنا جاهز</string>
+    <string name="let_s_start_section">لنبدأ من القسم 1: المبتدئ</string>
+    <string name="spanish_in_no_time">ستتحدث الإسبانية في وقت قصير</string>
+    <string name="btn_unlock_gift">تجهيز مجانًا</string>
+    <string name="subtitle_unlock_gift">مع هذه التجميدات المجانية لليوم الواحد، يمكنك تخطي يوم واحد من التمرين دون فقدان استمرارك</string>
+    <string name="title_unlock_gift">لقد فتحت هدية!</string>
+    <string name="btn_get_app_for_free_CAPS">احصل على التطبيق مجانًا</string>
+    <string name="btn_no_thanks_CAPS">لا، شكرًا</string>
+    <string name="getapp_subtitle">دروس قراءة ممتعة وفعالة للأطفال</string>
+    <string name="getapp_title">تحقق من تطبيقنا الجديد</string>
+    <string name="day_7_streak">استمرار لمدة 7 أيام</string>
+    <string name="good">جيد</string>
+    <string name="complete1x">ستكون أكثر 1 مرة عرضًا لاستكم</string>
+    <string name="day_14_streak">استمرار لمدة 14 يومًا</string>
+    <string name="great">رائع</string>
+    <string name="complete5x">ستكون أكثر 5 مرات احتمالًا لاستكمال الدورة!</string>
+    <string name="day_30_streak">استمرار لمدة 30 يومًا</string>
+    <string name="incredible">رائع</string>
+    <string name="complete25x">ستكون أكثر 25 مرة احتمالًا لاستكمال الدورة!</string>
+    <string name="day_50_streak">استمرار لمدة 50 يومًا</string>
+    <string name="unstoppable">لا يمكن إيقافه</string>
+    <string name="complete125x">ستكون أكثر 125 مرة احتمالًا لاستكمال الدورة!</string>
+    <string name="commit_to_learn">التزام بتعلم الإسبانية!</string>
+    <string name="what_is_streak_goal">أهداف الاستمرار تساعدك في البقاء ملتزمًا!</string>
+    <string name="select_streak">حدد هدف الاستمرار</string>
+    <string name="commit_goal">التزام بهدفي</string>
+    <string name="complete_sentence">أكمل بعض الخطوات المفقودة لتحقيق حياة رائعة</string>
+    <string name="daily_quests_title">المهام اليومية</string>
+    <string name="earn_rewards_with_quests_title">اكسب مكافآت مع المهام!</string>
+    <string name="unit_1">الوحدة 1</string>
+    <string name="form_basic_sentences">صياغة جمل أساسية، تحية الأشخاص</string>
+    <string name="start">بدء</string>
+    <string name="celebrate_achievements_with_friends">احتفل بالإنجازات\nمع الأصدقاء!</string>
+    <string name="add_friends">إضافة أصدقاء</string>
+    <string name="streak">الاستمرار</string>
+    <string name="a_lesson_every_day">أكمل درسًا كل يوم للمحافظة على الاستمرار!</string>
+    <string name="start_a_lesson">بدء درس</string>
+    <string name="tune_into_learning">"استمع إلى التعلم! 🎵 "</string>
+    <string name="here_are_4_tips">إليك 4 نصائح\nلدراسة اللغة مع الموسيقى!</string>
+    <string name="these_are">"هذه هي "</string>
+    <string name="_8_common_mistakes">"8 أخطاء شائعة "</string>
+    <string name="to_watch_out_for_during_your_lessons">للاحتراس منها أثناء دروسك!</string>
+    <string name="_12_days">12 يومًا</string>
+    <string name="what_wil_english_sound_like_in_100_years">"كيف ستبدو الإنجليزية بعد 100 عام؟ "</string>
+    <string name="here_are_our_predictions">إليك توقعاتنا!</string>
+    <string name="_26_days">26 يومًا</string>
+    <string name="our_brains_are_built">"أدمغتنا مبنية للتعلم... ولكن كيف يمكنها ذلك؟ "</string>
+    <string name="it_s_all_about_tracking_patterns">الأمر يتعلق بتتبع الأنماط!</string>
+    <string name="welcome_to_your_feed">مرحبًا بك في تغذيتك! تفقد بانتظام للحصول على آخر التحديثات من دوولينجو.</string>
+    <string name="_742_days">742 يومًا</string>
+    <string name="_6_days">6 أيام</string>
+    <string name="awesome">رائع</string>
+    <string name="you_added_a_profile_picture">لقد أضفت صورة ملفك الشخصي</string>
+    <string name="you_leveled_up">لقد ارتقيت في إنجاز الصورة!</string>
+    <string name="don_t_spend">لا تنفقهم جميعًا في مكان واحد.</string>
+    <string name="you_earned_25_gems">لقد كسبت 25 جوهرة!</string>
+    <string name="create_avatar">إنشاء الصورة الرمزية</string>
+    <string name="done">تم</string>
+    <string name="skin_tone">لون البشرة</string>
+    <string name="expression">التعبير</string>
+    <string name="headwear">الملحقات الرأسية</string>
+    <string name="headwear_color">لون الملحقات الرأسية</string>
+    <string name="as_in">"كما في "</string>
+    <string name="verbguide_subtitle">أعتقد، لذلك ..</string>
+    <string name="verbguide_title">نصيحة</string>
+    <string name="VerbScreen_description">في اللغة الإنجليزية، تتغير أشكال الأفعال اعتمادًا على من يقوم بالفعل. على سبيل المثال، نقول "أنا أكون"، "أنت تكون"، و"هي تكون". في الإسبانية، تفعل نفس الشيء.</string>
+    <string name="VerbScreen_Example">أنا فتاة. أنت فتى</string>
+    <string name="unit_1_guidebook">كتيب الوحدة 1</string>
+    <string name="explore_grammar_tips">استكشف نصائح القواعد النحوية والعبارات الرئيسية لهذه الوحدة</string>
+    <string name="key_phrases_ss">عبارات مهمة</string>
+    <string name="form_sentences">صياغة جمل أساسية</string>
+    <string name="spanish_sentence_1">الولد يأكل التفاح</string>
+    <string name="english_sentence_1">"ولد يأكل تفاحًا."</string>
+    <string name="spanish_sentence_2">الفتاة تشرب الماء</string>
+    <string name="english_sentence_2">"فتاة تشرب ماء.".</string>
+    <string name="spanish_sentence_3">المرأة تشرب الحليب</string>
+    <string name="english_sentence_3"> "المرأة تشرب الحليب."</string>
+    <string name="greet_people">تحية الأشخاص</string>
+    <string name="volume_up">زيادة الصوت</string>
+    <string name="holla_buenos_dias">مرحبًا، صباح الخير</string>
+    <string name="hello_good_morning">"مرحبًا، صباح الخير."</string>
+    <string name="buenos_dias">صباح الخير!</string>
+    <string name="good_morning">"صباح الخير!"</string>
+    <string name="adios_buenas_noches">وداعًا، مساء الخير</string>
+    <string name="bye_good_night">"تصبح على خير!".</string>
+    <string name="buenas_noches">مساء الخير!</string>
+    <string name="good_night">"تصبح على خير!"</string>
+    <string name="hola_yo_soy_juan">مرحبًا، أنا جوان.</string>
+    <string name="hello_i_am_juan">"مرحبًا، أنا جوان."</string>
+    <string name="mucho_gusto">تشرفنا.</string>
+    <string name="nice_to_meet_you">"مُسرني لقاؤك."</string>
+    <string name="complete_each_month">اكمل تحدي كل شهر لكسب شارات حصرية</string>
+    <string name="earn_your_first_badge">اكسب شارتك الأولى!</string>
+    <string name="enter_your_details">أدخل تفاصيلك</string>
+
+
+
+
+</resources>
