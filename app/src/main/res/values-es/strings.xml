@@ -133,5 +133,12 @@
     <string name="spanish_sentence_2">Una niña bebe agua.</string>
     <string name="spanish_sentence_3">La mujer bebe leche.</string>
     <string name="greet_people">Saluda a</string>
+    <string name="register">REGISTER</string>
+    <string name="forgot_password">FORGOT PASSWORD</string>
+    <string name="sign_in_with_google">SIGN IN WITH GOOGLE</string>
+    <string name="sign_in_with_facebook">SIGN IN WITH FACEBOOK</string>
+    <string name="sign_in">Sign In</string>
+    <string name="password">Password</string>
+    <string name="username_or_email">Username or email</string>
 
 </resources>

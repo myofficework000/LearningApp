@@ -46,7 +46,7 @@ fun HowManyWordsToLearn(navController: NavController){
         )
 
         Text(
-            text = "That's 25 words in your first week!",
+            text = stringResource(R.string.that_s_25_words_in_your_first_week),
             modifier = Modifier
                 .size(50.dp)
                 .padding(20.dp)
