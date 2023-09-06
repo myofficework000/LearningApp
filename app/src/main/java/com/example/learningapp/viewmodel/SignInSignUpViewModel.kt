@@ -1,21 +1,35 @@
 package com.example.learningapp.viewmodel
 
+
+import android.util.Log
+
 import android.content.Context
+
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.learningapp.modal.dto.User
+
+import com.example.learningapp.modal.local.UserDao
+
 import com.example.learningapp.view.screen.utils.putStringInSharedPreferences
+
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FirebaseFirestore
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class SignInSignUpViewModel : ViewModel() {
+@HiltViewModel
+class SignInSignUpViewModel
+    @Inject constructor(private val userDao: UserDao)
+    : ViewModel() {
+
+
 
     private var firebaseAuth: FirebaseAuth = FirebaseAuth.getInstance()
     private var firebaseFirestore = FirebaseFirestore.getInstance()
     private lateinit var firebaseUser: FirebaseUser
-    private val users = "users"
 
     private val _registrationStatus = MutableLiveData<String>()
     val registrationStatus: LiveData<String> = _registrationStatus
@@ -36,7 +50,9 @@ class SignInSignUpViewModel : ViewModel() {
                     _registrationStatus.value = "Register Successful!!"
                     firebaseUser = firebaseAuth.currentUser!!
                     sendVerificationEmailLink()
-                    addIntoFireStoreDatabase(User(firebaseUser.uid, email, password))
+                    val user= User(firebaseUser.uid, email, password)
+                    addIntoFireStoreDatabase(user)
+                    checkAndAddIntoRoomLocalDatabase(user)
                 } else {
                     _registrationStatus.value = "Register failed"
                 }
@@ -75,11 +91,36 @@ class SignInSignUpViewModel : ViewModel() {
     }
 
     private fun addIntoFireStoreDatabase(user: User) {
-        val userRef = firebaseFirestore.collection(users).document(user.userId)
+        val userRef = firebaseFirestore.collection(Companion.COLLECTION_USER).document(user.uid)
         userRef.set(user).addOnSuccessListener {
             _savedToFireStore.value = "User Successfully Saved to FirebaseStore"
         }.addOnFailureListener {
             _savedToFireStore.value = "User failed to Saved to FirebaseStore"
         }
+    }
+    fun checkAndAddIntoRoomLocalDatabase(user: User){
+        var userFromDb= userDao.findUserById(user.uid)
+
+        if(userFromDb == null){
+            userDao.saveUser(user)
+        }
+        userFromDb= userDao.findUserById(user.uid)
+        Log.i("SignInSignUpViewModel",
+            userDao.getAllUser().toString())
+    }
+    fun checkAndAddIntoRoomLocalDatabase(user: FirebaseUser?){
+        val email = user?.email ?: ""
+        val uid = user?.uid ?: ""
+        val phone = user?.phoneNumber ?: ""
+        val imgUrl =user?.photoUrl ?: ""
+        val userLocal= User(uid = uid,email=email,mobile =phone, imgURL = imgUrl.toString())
+        checkAndAddIntoRoomLocalDatabase(userLocal)
+    }
+    private fun signInWithGoogle(){
+
+    }
+
+    companion object {
+        private const val COLLECTION_USER = "users"
     }
 }
