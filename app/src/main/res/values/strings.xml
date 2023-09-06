@@ -149,4 +149,15 @@
     <string name="complete_each_month">Complete each month\'s challenge to earn exclusive badges</string>
     <string name="earn_your_first_badge">Earn your first badge!</string>
     <string name="enter_your_details">Enter your details</string>
+    <string name="streak_freeze_used">Streak Freeze Used</string>
+    <string name="no_thanks">NO THANKS</string>
+    <string name="refill">"refill $  "</string>
+    <string name="register">REGISTER</string>
+    <string name="forgot_password">FORGOT PASSWORD</string>
+    <string name="sign_in_with_google">SIGN IN WITH GOOGLE</string>
+    <string name="sign_in_with_facebook">SIGN IN WITH FACEBOOK</string>
+    <string name="sign_in">Sign In</string>
+    <string name="password">Password</string>
+    <string name="username_or_email">Username or email</string>
+    <string name="that_s_25_words_in_your_first_week">That\'s 25 words in your first week!</string>
 </resources>

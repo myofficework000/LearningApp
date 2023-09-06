@@ -90,6 +90,13 @@
     <string name="start">शुरू करें</string>
     <string name="celebrate_achievements_with_friends">दोस्तों के साथ उपलब्धियों का जश्न मनाएं!</string>
     <string name="add_friends">दोस्त जो</string>
+    <string name="register">REGISTER</string>
+    <string name="forgot_password">FORGOT PASSWORD</string>
+    <string name="sign_in_with_google">SIGN IN WITH GOOGLE</string>
+    <string name="sign_in_with_facebook">SIGN IN WITH FACEBOOK</string>
+    <string name="sign_in">Sign In</string>
+    <string name="password">Password</string>
+    <string name="username_or_email">Username or email</string>
     <string name="streak">स्ट्रीक</string>
     <string name="a_lesson_every_day">हर दिन एक पाठ पूरा करें ताकि आपकी स्ट्रीक बरकरार रहे!</string>
     <string name="start_a_lesson">पाठ शुरू करें</string>
@@ -150,6 +157,5 @@
     <string name="complete_each_month">हर महीने की चुनौती पूरी करें और विशेष बैज जीतें</string>
     <string name="earn_your_first_badge">अपना पहला बैज जीतें!</string>
     <string name="enter_your_details">अपना विवरण दर्ज करें</string>
-
 
 </resources>

@@ -125,7 +125,7 @@ fun SignInEmailScreen(navController: NavController) {
                 ),
                 value = userName,
                 onValueChange = { userName = it },
-                label = { Text("Username or email") },
+                label = { Text(stringResource(R.string.username_or_email)) },
                 modifier = Modifier
                     .fillMaxWidth()
             )
@@ -137,7 +137,7 @@ fun SignInEmailScreen(navController: NavController) {
                 value = password,
                 onValueChange = { password = it },
                 visualTransformation = (if (isPwdVisible) VisualTransformation.None else PasswordVisualTransformation()),
-                label = { Text("Password") },
+                label = { Text(stringResource(R.string.password)) },
                 trailingIcon = {
                     IconButton(onClick = { isPwdVisible = !isPwdVisible }) {
                         if (isPwdVisible) {
@@ -166,7 +166,7 @@ fun SignInEmailScreen(navController: NavController) {
                     end.linkTo(parent.end)
                 }) {
             Text(
-                "Sign In",
+                stringResource(R.string.sign_in),
                 modifier = Modifier.padding(vertical = 8.dp)
             )
         }
@@ -186,7 +186,7 @@ fun SignInEmailScreen(navController: NavController) {
                     end.linkTo(parent.end)
                 }) {
             Text(
-                "REGISTER",
+                stringResource(R.string.register),
                 modifier = Modifier.padding(vertical = 8.dp)
             )
         }
@@ -203,7 +203,7 @@ fun SignInEmailScreen(navController: NavController) {
                 end.linkTo(parent.end)
             }
         ) {
-            Text(text = "FORGOT PASSWORD")
+            Text(text = stringResource(R.string.forgot_password))
         }
 
         Button(
@@ -237,7 +237,7 @@ fun SignInEmailScreen(navController: NavController) {
                         .size(24.dp)
                         .padding(end = 8.dp)
                 )
-                Text("SIGN IN WITH GOOGLE")
+                Text(stringResource(R.string.sign_in_with_google))
             }
         }
 
@@ -270,7 +270,7 @@ fun SignInEmailScreen(navController: NavController) {
                         .size(24.dp)
                         .padding(end = 8.dp)
                 )
-                Text("SIGN IN WITH FACEBOOK")
+                Text(stringResource(R.string.sign_in_with_facebook))
             }
         }
 
