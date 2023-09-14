@@ -17,7 +17,8 @@ class LanguageViewModel : ViewModel() {
         "zh", // Chinese
         "ru", // Russian
         "ar", // Arabic
-        "hi"  //Hindi
+        "hi",  //Hindi
+        "ba", //bosnin
     )
 
     private val defaultLanguage = "en"
